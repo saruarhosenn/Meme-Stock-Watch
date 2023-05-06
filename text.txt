@@ -1,9 +1,31 @@
 Work Change & Update:
 ==============================
-1. home page er post section post-card hover, added comment box & popup image, video ---- Change post.scss
-2. notifications outside click hide ---- Change main.js
-3. sidebar logo increase margin-bottom ----- Change sidebar.scss
-4. subscription page er current plan section delete cancel plan button & add pricing card ----- change subscription.html page &subscription.scss
-5. home page er post section added select opption ---- home.scss 
-6. bookmark page er only html code post-card & lity css, jss file update
-7. fix post card er all comment box eksathe open howa ---- Change post.scss & main.js
+
+=> Home page post-section update: 
+-------------------------------------
+1. post-card এ হোভার ইফেক্ট ---- post.scss
+2. comment box এড ---- post.scss
+3. popup image, video এড ---- post.scss
+4. added select-opption ---- home.scss
+5. ক্লিক করার পর সব Comment-box একসাথে ওপেন হওয়া issue solve ---- post.scss & main.js
+
+=> Header update:
+-----------------------
+1. Notifications Show হওয়ার পর, Outside এ ক্লিক করলে hide হবে 
+Update main.js File
+
+=> Sidebar update:
+-----------------------
+1. Sidebar এর logo এর margin-bottom 
+Update sidebar.scss file
+
+=> Subscription page update:
+-------------------------------
+1. subscription page এর current-plan section এর ডিলিট করা হয়ছে cancel-plan button
+2. এড Pricing card 
+Update subscription.scss file
+
+=> Bookmark page update:
+-------------------------------
+1. এড lity.js & lity.css File
+2. Update post-card html code
