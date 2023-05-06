@@ -1,0 +1,90 @@
+/* 
+==================================
+Reuseble CSS Classes
+==================================
+*/
+.main-content {
+  padding: 12rem 3.1rem 5rem 3.3rem;
+  margin-left: 31.5rem;
+  -moz-transition: margin 0.3s ease-out;
+  -o-transition: margin 0.3s ease-out;
+  -webkit-transition: margin 0.3s ease-out;
+  transition: margin 0.3s ease-out;
+  @media #{$xl} {
+    margin-left: 26rem;
+  }
+  @media #{$lg} {
+    margin-left: 25rem;
+  }
+  @media #{$md} {
+    margin-left: 0;
+  }
+  @media #{$xsm} {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main-content-slide {
+    margin-left: 8rem;
+    -moz-transition: margin 0.3s ease-out;
+    -o-transition: margin 0.3s ease-out;
+    -webkit-transition: margin 0.3s ease-out;
+    transition: margin 0.3s ease-out;
+  }
+}
+
+.t-linear {
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.shadow-one {
+  box-shadow: 0px 10.6296px 11.6926px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-tow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.border-one {
+  border: 0.1rem solid var(--border-1);
+}
+
+.border-tow {
+  border: 0.1rem solid var(--border-2);
+}
+
+.border-three {
+  border: 0.1rem solid var(--border-4);
+}
+
+.redius-18 {
+  border-radius: 1.8rem;
+}
+
+.redius-16 {
+  border-radius: 1.6rem;
+}
+
+.redius-8 {
+  border-radius: 0.8rem;
+}
+
+.redius-7 {
+  border-radius: 0.7rem;
+}
+
+a,
+button,
+img,
+svg,
+svg path,
+span,
+.t-ease-in-out {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}

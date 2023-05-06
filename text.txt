@@ -1,0 +1,9 @@
+Work Change & Update:
+==============================
+1. home page er post section post-card hover, added comment box & popup image, video ---- Change post.scss
+2. notifications outside click hide ---- Change main.js
+3. sidebar logo increase margin-bottom ----- Change sidebar.scss
+4. subscription page er current plan section delete cancel plan button & add pricing card ----- change subscription.html page &subscription.scss
+5. home page er post section added select opption ---- home.scss 
+6. bookmark page er only html code post-card & lity css, jss file update
+7. fix post card er all comment box eksathe open howa ---- Change post.scss & main.js

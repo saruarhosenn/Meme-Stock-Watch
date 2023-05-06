@@ -1,0 +1,208 @@
+/*----- Sidebar CSS -----*/
+.offcanvas-backdrop {
+  opacity: 0 !important;
+  @media #{$md} {
+    opacity: 0.7 !important;
+  }
+}
+
+.sidebar {
+  height: 100%;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 3.3rem 2rem 4.6rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 9999;
+  -moz-transition: width 0.3s ease-out;
+  -o-transition: width 0.3s ease-out;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  /* hide scrollbar but allow scrolling */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  &.offcanvas-start {
+    transform: translateX(0%);
+    border: 0;
+    @media #{$md} {
+      transform: translateX(-120%);
+    }
+  }
+  &.offcanvas {
+    visibility: visible;
+    width: 31.5rem;
+    @media #{$xl} {
+      width: 26rem;
+    }
+    @media #{$lg} {
+      width: 25rem;
+    }
+    @media #{$md} {
+      width: 27rem;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+  .close-sidebar {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--bg-color8);
+    border-radius: 0.3rem;
+  }
+  .sidebar-logo {
+    margin-bottom: 10rem;
+    @media #{$md} {
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+    .sidebar-collapse-btn {
+      padding: 0.5rem 1rem;
+      border-radius: 0.4rem;
+    }
+  }
+}
+
+@media #{$md} {
+  .offcanvas {
+    visibility: hidden;
+  }
+}
+
+.sidebar-menu {
+  .sidebar-page-menu {
+    .sidebar-page-menu-list {
+      .sidebar-page-menu-item:not(:last-child) {
+        margin-bottom: 1.2rem;
+        @media #{$md} {
+          margin-bottom: 1rem;
+        }
+      }
+      .sidebar-page-menu-item {
+        .sidebar-page-menu-link {
+          padding: 1.9rem;
+          @media #{$md} {
+            padding: 1rem 1.3rem;
+          }
+          @media #{$md} {
+            .sidebar-page-menu-text {
+              font-size: var(--size-xl);
+            }
+          }
+          &:hover {
+            background-color: var(--bg-color6);
+            .sidebar-page-menu-text {
+              color: var(--primary-color);
+            }
+          }
+          .sidebar-page-menu-img {
+            margin-right: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar-light {
+  margin-top: 10rem;
+  max-width: 20.6rem;
+  padding: 5.5rem 2rem 2rem;
+  .sidebar-light-img {
+    position: absolute;
+    top: -7.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .sidebar-light-title {
+    margin-bottom: 1rem;
+  }
+}
+
+.sidebar-logout-btn {
+  margin-top: 8.1rem;
+  padding: 1.9rem;
+  @media #{$md} {
+    margin-top: 5rem;
+    padding: 1rem 1.3rem;
+  }
+  @media #{$md} {
+    .sidebar-logout-text {
+      font-size: var(--size-xl);
+    }
+  }
+  &:hover {
+    background-color: var(--bg-color6);
+    .sidebar-logout-text {
+      color: var(--primary-color);
+    }
+  }
+  .sidebar-logout-img {
+    margin-right: 1.3rem;
+  }
+}
+
+/*------ Side Bar Collapse Style -----*/
+@media only screen and (min-width: 992px) {
+  .sidebar-collapse {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    -moz-transition: width 0.3s ease-out;
+    -o-transition: width 0.3s ease-out;
+    -webkit-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out;
+    &.offcanvas {
+      width: 8rem;
+    }
+    .sidebar-logo {
+      justify-content: center !important;
+      a {
+        display: none;
+      }
+      .sidebar-collapse-btn {
+        img {
+          transform: rotate(180deg);
+          -moz-transition: all 0.3s ease-out;
+          -o-transition: all 0.3s ease-out;
+          -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+        }
+      }
+    }
+    .sidebar-menu {
+      .sidebar-page-menu {
+        .sidebar-page-menu-list {
+          .sidebar-page-menu-item {
+            .sidebar-page-menu-link {
+              padding: 1.5rem;
+              .sidebar-page-menu-text {
+                display: none;
+              }
+              .sidebar-page-menu-img {
+                margin-right: 0rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sidebar-light {
+      display: none;
+    }
+    .sidebar-logout-btn {
+      padding: 1.5rem;
+      .sidebar-logout-text {
+        display: none;
+      }
+      .sidebar-logout-img {
+        margin-right: 0;
+      }
+    }
+  }
+}

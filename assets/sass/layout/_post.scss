@@ -1,0 +1,140 @@
+/*----- Post Section CSS -----*/
+.post-row {
+  --bs-gutter-y: 5rem;
+  --bs-gutter-x: 5rem;
+  @media #{$xl} {
+    --bs-gutter-y: 3rem;
+    --bs-gutter-x: 3rem;
+  }
+  @media #{$lg} {
+    --bs-gutter-y: 2.5rem;
+    --bs-gutter-x: 2.5rem;
+  }
+  @media only screen and (max-width: 650px) {
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+.post-title {
+  margin-bottom: 2.1rem;
+}
+
+.post-card {
+  padding: 0.5rem;
+  background-color: var(--primary-bg);
+  transition: transform 0.4s linear;
+  &:hover {
+    transform: translateY(-0.6rem);
+  }
+  .post-card-header {
+    padding: 1rem 1.5rem 1.5rem;
+    .post-card-user {
+      .post-card-user-img {
+        margin-right: 1rem;
+        width: 4.2rem;
+        height: 4.2rem;
+      }
+    }
+  }
+  .post-card-body {
+    .post-card-body-wrap {
+      padding: 0 1.5rem;
+    }
+    .post-card-body-date {
+      margin: 1.5rem 0 0.8rem;
+    }
+    .post-card-body-text {
+      .post-card-body-title {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+  .post-card-footer {
+    padding: 1.3rem 1.5rem 1.5rem;
+    .post-card-footer-heart {
+      margin-right: 1.6rem;
+    }
+  }
+}
+
+.post-comment-box-wrap {
+  padding: 0.5rem 1.5rem 2rem;
+}
+
+.post-comment-box {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 0.1rem solid var(--border-9);
+  @media only screen and (max-width: 1300px) {
+    flex-direction: column;
+  }
+  @media #{$lg} {
+    flex-direction: row;
+  }
+  @media only screen and (max-width: 750px) {
+    flex-direction: column;
+  }
+  @media only screen and (max-width: 650px) {
+    flex-direction: row;
+  }
+  @media only screen and (max-width: 375px) {
+    flex-direction: column;
+  }
+  .post-comment-box-message {
+    height: 2.9rem;
+    border: 0.1rem solid var(--border-9);
+    font-family: var(--primary-font-400);
+    font-size: var(--size-lg);
+    color: var(--secondary-color);
+    padding: 0.3rem 1rem;
+    flex-grow: 1;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+    &::placeholder {
+      color: var(--text-color15);
+    }
+    &:focus {
+      border-color: var(--border-2);
+    }
+    @media only screen and (max-width: 1300px) {
+      width: 100%;
+    }
+    @media #{$lg} {
+      width: auto;
+    }
+    @media only screen and (max-width: 750px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 650px) {
+      width: auto;
+    }
+    @media only screen and (max-width: 375px) {
+      width: 100%;
+    }
+  }
+  .post-comment-box-btn {
+    padding: 0.7rem 1.6rem;
+    @media only screen and (max-width: 1300px) {
+      margin-left: auto;
+    }
+    @media #{$lg} {
+      margin-left: 0;
+    }
+    @media only screen and (max-width: 750px) {
+      margin-left: auto;
+    }
+    @media only screen and (max-width: 650px) {
+      margin-left:0;
+    }
+    @media only screen and (max-width: 375px) {
+      margin-left: auto;
+    }
+  }
+}

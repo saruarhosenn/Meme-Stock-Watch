@@ -1,0 +1,86 @@
+/* 
+======================================================
+Home Page Style CSS
+======================================================
+*/
+/*---- Start Post Section ----*/
+@media #{$xl} {
+  .home-post-title {
+    margin-bottom: 2rem;
+  }
+}
+
+.home-post-title {
+  @media #{$xsm} {
+    margin-bottom: 1rem;
+  }
+  @media only screen and (max-width: 670px) {
+    display: block !important;
+  }
+  .post-select {
+    gap: 1rem;
+    @media only screen and (max-width: 670px) {
+      margin-top: 2rem;
+    }
+    @media only screen and (max-width: 375px) {
+      flex-direction: column;
+      align-items: flex-end !important;
+    }
+  }
+}
+
+.mem-stock-select {
+  padding-left: 1rem;
+  padding-right: 3rem !important;
+  border: 0;
+  font-family: var(--primary-font-500);
+  font-size: var(--size-3xl);
+  padding-right: 2rem;
+  color: var(--text-color11);
+  background-color: transparent;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  @media #{$xl} {
+    font-size: var(--size-2xl);
+  }
+  &::after {
+    border-bottom: 2px solid var(--border-2);
+    border-right: 2px solid var(--border-2);
+    height: 1.2rem;
+    width: 1.2rem;
+    right: 1.2rem;
+    transform: translateY(-50%) rotate(45deg);
+    @media #{$xl} {
+      height: 0.9rem;
+      width: 0.9rem;
+    }
+  }
+  &.open {
+    &::after {
+      transform: translateY(-50%) rotate(-135deg);
+    }
+  }
+  .list {
+    background-color: var(--primary-bg);
+    border-radius: 0.8rem;
+    box-shadow: 0px 10.6296px 11.6926px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+  }
+  .option {
+    font-family: var(--primary-font-500);
+    font-size: var(--size-2xl);
+    color: var(--primary-color);
+    line-height: 3.7rem;
+    min-height: 3.7rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    @media #{$xl} {
+      font-size: var(--size-xl);
+    }
+  }
+  .option:hover,
+  .option.focus,
+  .option.selected.focus {
+    background-color: var(--body-bg);
+  }
+}

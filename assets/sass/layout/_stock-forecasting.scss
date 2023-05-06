@@ -1,0 +1,49 @@
+/*----- Stock Forecasting Section CSS -----*/
+.stock-forecasting-section {
+  padding-bottom: 4.5rem;
+}
+
+.stock-forecasting-wrap {
+  padding: 1.7rem 2rem;
+  @media #{$xsm} {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.stock-forecasting-title {
+  margin-bottom: 1.5rem;
+}
+
+.stock-forecasting-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  @media #{$xl} {
+    gap: 2.5rem;
+  }
+  @media #{$lg} {
+    gap: 2rem;
+  }
+  > * {
+    flex-grow: 1;
+  }
+}
+.stock-forecasting-card {
+  padding: 1.6rem 1.9rem;
+  .stock-forecasting-card-counter {
+    margin-top: 1.9rem;
+    @media #{$xsm} {
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
+  }
+  .stock-forecasting-card-color-text {
+    @media #{$xsm} {
+      font-size: var(--size-2xl);
+      line-height: 1.5;
+      margin-top: 0.5rem;
+    }
+  }
+}

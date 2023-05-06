@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---- Author Name ---->
+    <meta name="author" content="Your Name" />
+    <!---- Website Description ---->
+    <meta name="description" content="Website Description" />
+    <!---- Website keywords ---->
+    <meta name="keywords" content="Website keywords" />
+    <!------- Favicon ------->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/logo.png"
+    />
+    <!---- Website Title ---->
+    <title>Bookmark</title>
+    <!-------- Fonts -------->
+    <link rel="stylesheet" href="assets/fonts/fonts.css" />
+    <!------- Css Here ------->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/lity.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+	  
+	  <!-- Start Loader -->
+    <div class="section-loader">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+      </div>
+    </div>
+    <!-- End Loader -->
+	  
+	  
+    <!-- 
+	  =====================================================
+	  Start Sidebar Section 
+	  =====================================================
+	-->
+    <aside class="sidebar primary-bg offcanvas offcanvas-start offcanvas-m" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <button class="close-sidebar d-flex align-items-center justify-content-center d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close">
+        <img src="assets/images/sidebar/close-white.svg" alt="close-white">
+      </button>
+      <!-- Sidebar Logo -->
+      <div class="sidebar-logo d-flex align-items-center justify-content-between">
+        <a href="index.html">
+          <img src="assets/images/sidebar-logo.svg" alt="sidebar logo" class="img-fluid">
+        </a>
+        <button type="button" class="sidebar-collapse-btn d-none d-lg-inline-block bg-color6">
+          <img src="assets/images/sidebar/right-angle.svg" alt="right-angle">
+        </button>
+      </div>
+      <!-- Sidebar Menu -->
+      <div class="sidebar-menu">
+        <nav class="sidebar-page-menu">
+          <ul class="sidebar-page-menu-list">
+            <li class="sidebar-page-menu-item">
+              <a href="index.html" class="sidebar-page-menu-link d-flex align-items-center redius-8" title="Dashboard">
+                <img src="assets/images/sidebar/Dashboard.svg" alt="Dashboard" class="sidebar-page-menu-img">
+                <span class="sidebar-page-menu-text primary-font-500 size-2xl text-color4 text-capitalize">Dashboard</span>
+              </a>
+            </li>
+            <li class="sidebar-page-menu-item">
+              <a href="subscription.html" class="sidebar-page-menu-link d-flex align-items-center redius-8" title="Subscriptions">
+                <img src="assets/images/sidebar/Subscriptions.svg" alt="Subscriptions" class="sidebar-page-menu-img">
+                <span class="sidebar-page-menu-text primary-font-500 size-2xl text-color4 text-capitalize">Subscriptions</span>
+              </a>
+            </li>
+            <li class="sidebar-page-menu-item">
+              <a href="bookmark.html" class="sidebar-page-menu-link d-flex align-items-center redius-8" title="Bookmark">
+                <img src="assets/images/sidebar/Bookmark.svg" alt="Trading & Market" class="sidebar-page-menu-img">
+                <span class="sidebar-page-menu-text primary-font-500 size-2xl text-color4 text-capitalize">Bookmark</span>
+              </a>
+            </li>
+            <li class="sidebar-page-menu-item">
+              <a href="settings.html" class="sidebar-page-menu-link d-flex align-items-center redius-8" title="Settings">
+                <img src="assets/images/sidebar/Settings.svg" alt="Settings" class="sidebar-page-menu-img">
+                <span class="sidebar-page-menu-text primary-font-500 size-2xl text-color4 text-capitalize">Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sidebar-light position-relative bg-color4 text-center redius-16 mx-auto">
+        <img src="assets/images/sidebar/light.svg" alt="sidebar-light" class="sidebar-light-img img-fluid">
+        <p class="sidebar-light-title primary-font-500 size-lg text-color7">Thoughts Time</p>
+        <p class="primary-font-400 size-xl secondary-color">If you aren’t willing to own a stock for 10 years, don’t even think about owning it for 10 minutes.</p>
+      </div>
+      <a href="#" class="sidebar-logout-btn d-flex align-items-center redius-8" title="Logout">
+        <img src="assets/images/sidebar/logout.svg" alt="logout" class="sidebar-logout-img">
+        <p class="sidebar-logout-text primary-font-500 size-2xl text-color4">Logout</p>
+      </a>
+    </aside>
+    <!-- 
+	  =====================================================
+	  End Sidebar Section 
+	  =====================================================
+	-->
+
+
+    <!-- 
+	  =====================================================
+	  Start Header Section 
+	  =====================================================
+	-->
+    <header class="header primary-bg">
+      <div class="header-wrap row align-items-center">
+        <!-- Header Left -->
+        <div class="col-md-3 col-5">
+          <div class="header-left">
+            <div class="header-user-name">
+              <p class="header-user-name-text primary-font-500 size-3xl secondary-color text-capitalize">Hello Matt,</p>
+            </div>
+          </div>
+        </div>
+        <!-- Header Right -->
+        <div class="col-md-9 col-7">
+          <div class="header-right d-flex align-items-center justify-content-end">
+            <button type="button" onclick="openSearch()" class="header-search-open header-right-item d-md-none">
+              <img src="assets/images/header/search-black.svg" alt="search-black">
+            </button>
+            <form action="#" class="header-form header-right-item d-none d-md-block">
+              <input type="text" name="" id="" placeholder="Search for stocks Tips and more" class="header-form-search w-100 redius-8">
+              <svg class="header-form-search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.66683 14C11.1646 14 14.0002 11.1644 14.0002 7.66665C14.0002 4.16884 11.1646 1.33331 7.66683 1.33331C4.16903 1.33331 1.3335 4.16884 1.3335 7.66665C1.3335 11.1644 4.16903 14 7.66683 14Z" stroke="#A49F9F" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.6668 14.6666L13.3335 13.3333" stroke="#A49F9F" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>                
+            </form>
+            <!-- Header Mobile Search Box -->
+            <div id="headerSearchOverlay" class="header-search-overlay d-md-none">
+              <button type="button" class="header-search-form-closebtn" onclick="closeSearch()" title="Close Overlay">
+                <img src="assets/images/header/close-white.svg" alt="close-white">
+              </button>
+              <div class="header-search-overlay-content">
+                <form action="/action_page.php" class="header-search-form d-flex">
+                  <input type="text" placeholder="Search for stocks Tips and more" name="search" class="header-search-form-input">
+                  <button type="submit" class="header-search-form-btn bg-color7 d-flex align-items-center justify-content-center">
+                    <img src="assets/images/header/search-white.svg" alt="search-white">
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="header-right-item position-relative">
+              <button type="button" class="header-notification position-relative">
+                <img src="assets/images/header/notification.svg" alt="notification">
+                <span class="header-notification-badge rounded-circle bg-color5"></span>
+              </button>
+              <!-- Notification Card -->
+              <div class="notification-card primary-bg">
+                <div class="container-fluid px-0">
+                  <div class="row g-4 notification-card-header align-items-center">
+                    <div class="col-sm-6">
+                      <div class="notification-card-header-left d-flex align-items-center">
+                        <p class="primary-font-500 size-xl text-color16">Notifications</p>
+                        <select class="notification-select">
+                          <option data-display="All">All</option>
+                          <option value="1">Today</option>
+                          <option value="2">Yesterday</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <button type="button" class="notification-card-header-right d-flex align-items-center ms-sm-auto">
+                        <p class="primary-font-400 size-xl text-color16 me-2">Mark all as read</p>
+                        <img src="assets/images/notifications/outline.svg" alt="outline">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="notification-card-body">
+                  <div class="notification-card-body-item">
+                    <div class="d-flex align-items-start">
+                      <a href="#" class="notification-card-body-user d-block position-relative">
+                        <img src="assets/images/notifications/Lex-Murphy.png" alt="Lex Murphy" class="notification-card-body-user-img">
+                        <span class="notification-user-badge bg-color8 rounded-circle"></span>
+                      </a>
+                      <div class="notification-card-body-user-wrap">
+                        <a href="#" class="notification-card-body-user-text">  
+                          <span class="primary-font-700 size-xl text-color16 d-inline">Lex Murphy</span>
+                          <span class="primary-font-500 size-xl text-color16 d-inline">requested access to</span>
+                          <span class="primary-font-700 size-xl text-color16 d-inline">UNIX directory tree hierarchy</span>
+                        </a>
+                        <div class="notification-card-body-btn">
+                          <button type="button" class="notification-card-body-btn-bg bg-btn bg-color7 redius-7 primary-font-500 size-xl text-color14">Accept</button>
+                          <button type="button" class="notification-card-body-btn-border border-btn redius-7 primary-font-500 size-xl text-color17 border-three">Reject</button>
+                        </div>
+                        <p class="primary-font-500 size-xl text-color18">Today at <span>9:42 AM</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="notification-card-body-item">
+                    <div class="d-flex align-items-start">
+                      <a href="#" class="notification-card-body-user d-block position-relative">
+                        <img src="assets/images/notifications/Ray-Arnold.png" alt="Ray Arnold" class="notification-card-body-user-img">
+                        <span class="notification-user-badge bg-color8 rounded-circle"></span>
+                      </a>
+                      <div class="notification-card-body-user-wrap">
+                        <a href="#" class="notification-card-body-user-text">  
+                          <span class="primary-font-700 size-xl text-color16 d-inline">Ray Arnold</span>
+                          <span class="primary-font-500 size-xl text-color16 d-inline">left 6 comments on</span>
+                          <span class="primary-font-700 size-xl text-color16 d-inline">Isla Nublar SOC2 compliance report</span>
+                        </a>
+                        <p class="primary-font-500 size-xl text-color18">Yesterday at <span>11:42 PM</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="notification-card-body-item">
+                    <div class="d-flex align-items-start">
+                      <a href="#" class="notification-card-body-user d-block position-relative">
+                        <img src="assets/images/notifications/Dennis-Nedry.png" alt="Ray Arnold" class="notification-card-body-user-img">
+                      </a>
+                      <div class="notification-card-body-user-wrap">
+                        <a href="#" class="notification-card-body-user-text">  
+                          <span class="primary-font-700 size-xl text-color16 d-inline">Dennis Nedry</span>
+                          <span class="primary-font-500 size-xl text-color16 d-inline">commented</span>
+                          <span class="primary-font-700 size-xl text-color16 d-inline">on Isla Nublar SOC2 compliance report</span>
+                        </a>
+                        <p class="notification-card-body-user-desc primary-font-500 size-xl text-color16">
+                          “Oh, I finished de-bugging the phones, but the system's compiling for eighteen minutes, or twenty.  So, some minor systems may go on and off for a while.”
+                        </p>
+                        <p class="primary-font-500 size-xl text-color18">Yesterday at <span>5:42 PM</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="notification-card-body-item">
+                    <div class="d-flex align-items-start">
+                      <a href="#" class="notification-card-body-user d-block position-relative">
+                        <img src="assets/images/notifications/John-Hammond.png" alt="John Hammond" class="notification-card-body-user-img">
+                      </a>
+                      <div class="notification-card-body-user-wrap">
+                        <a href="#" class="notification-card-body-user-text">  
+                          <span class="primary-font-700 size-xl text-color16 d-inline">John Hammond</span>
+                          <span class="primary-font-500 size-xl text-color16 d-inline">created</span>
+                          <span class="primary-font-700 size-xl text-color16 d-inline">Isla Nublar SOC2 compliance report</span>
+                        </a>
+                        <p class="primary-font-500 size-xl text-color18">Last Wednesday at <span>11:15 AM</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-right-item">
+              <a href="#" class="header-user-profile">
+                <img src="assets/images/header/user-profile.png" alt="user-profile">
+              </a>
+            </div>
+            <button type="button" class="sidebar-open-btn d-block d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+              <div class="sidebar-open-btn-line"></div>
+              <div class="sidebar-open-btn-line"></div>
+              <div class="sidebar-open-btn-line"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- 
+	  =====================================================
+	  End Header Section 
+	  =====================================================
+	-->
+
+    <main class="main-content">
+      <!-- 
+		  =====================================================
+		  Start Post Section 
+		  =====================================================
+		-->
+      <section class="post-section">
+        <div class="container-fluid px-0">
+          <div class="post-title">
+            <h2 class="primary-font-500 size-6xl secondary-color text-capitalize">Bookmarks</h2>
+          </div>
+          <!----- Start row ----->
+          <div class="row post-row">
+            <article class="col-xl-4 col-sm-6">
+              <div class="post-card redius-8 shadow-one border-one">
+                <div class="post-card-header d-flex align-items-center justify-content-between">
+                  <div class="post-card-user d-flex align-items-center">
+                    <img src="assets/images/post/Shiron-Yousefl.png" alt="Shiron Yousefl" class="post-card-user-img rounded-circle">
+                    <div class="post-card-user-identity">
+                      <h3 class="primary-font-600 size-xl primary-color text-capitalize">Shiron Yousefl</h3>
+                      <p class="primary-font-500 size-md text-color3">CEO, MSW</p>
+                    </div>
+                  </div>
+                  <button type="button" class="post-card-dots-line">
+                    <img src="assets/images/post/dots-line.svg" alt="dots">
+                  </button>
+                </div>
+                <div class="post-card-body">
+                  <a href="javascript:void(0)" class="d-block">
+                    <img src="assets/images/post/post-1.png" alt="post img" class="redius-8 w-100" data-lity>
+                  </a>
+                  <div class="post-card-body-wrap">
+                    <div class="post-card-body-date d-flex align-items-center justify-content-between">
+                      <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00 PM</span></p>
+                      <a href="javascript:(voide)" class="">
+                        <img src="assets/images/post/bookmark.svg" alt="bookmark">
+                      </a>
+                    </div>
+                    <div class="post-card-body-text">
+                      <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
+                      <p class="primary-font-400 size-lg l-h-lg-19 primary-color">In comparison to <ins>$GME</ins> <ins>#GME</ins>, where it seems like shorts are taking a break for now. <br><br> Why?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-card-footer d-flex align-items-center justify-content-end">
+                  <button type="button" class="post-card-footer-heart">
+                    <img src="assets/images/post/heart.svg" alt="heart">
+                  </button>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
+                </div>
+                <div class="post-comment-box-wrap">
+                  <form action="#" class="post-comment-box">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Write A Comment....." class="post-comment-box-message rounded-pill"></textarea>
+                    <button type="submit" class="post-comment-box-btn bg-btn bg-color7 rounded-pill primary-font-600 size-md text-color14">Comment</button>
+                  </form>
+                </div>
+              </div>
+            </article>
+            <article class="col-xl-4 col-sm-6">
+              <div class="post-card redius-8 shadow-one border-one">
+                <div class="post-card-header d-flex align-items-center justify-content-between">
+                  <div class="post-card-user d-flex align-items-center">
+                    <img src="assets/images/post/Shiron-Yousefl.png" alt="Shiron Yousefl" class="post-card-user-img rounded-circle">
+                    <div class="post-card-user-identity">
+                      <h3 class="primary-font-600 size-xl primary-color text-capitalize">Shiron Yousefl</h3>
+                      <p class="primary-font-500 size-md text-color3">CEO, MSW</p>
+                    </div>
+                  </div>
+                  <button type="button" class="post-card-dots-line">
+                    <img src="assets/images/post/dots-line.svg" alt="dots">
+                  </button>
+                </div>
+                <div class="post-card-body">
+                  <a href="javascript:void(0)" class="d-block">
+                    <img src="assets/images/post/post-2.png" alt="post img" class="redius-8 w-100" data-lity>
+                  </a>
+                  <div class="post-card-body-wrap">
+                    <div class="post-card-body-date d-flex align-items-center justify-content-between">
+                      <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00 PM</span></p>
+                      <a href="javascript:(voide)" class="">
+                        <img src="assets/images/post/bookmark.svg" alt="bookmark">
+                      </a>
+                    </div>
+                    <div class="post-card-body-text">
+                      <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
+                      <p class="primary-font-400 size-lg l-h-lg-19 primary-color">In comparison to <ins>$GME</ins> <ins>#GME</ins>, where it seems like shorts are taking a break for now. <br><br> Why?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-card-footer d-flex align-items-center justify-content-end">
+                  <button type="button" class="post-card-footer-heart">
+                    <img src="assets/images/post/heart.svg" alt="heart">
+                  </button>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
+                </div>
+                <div class="post-comment-box-wrap">
+                  <form action="#" class="post-comment-box">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Write A Comment....." class="post-comment-box-message rounded-pill"></textarea>
+                    <button type="submit" class="post-comment-box-btn bg-btn bg-color7 rounded-pill primary-font-600 size-md text-color14">Comment</button>
+                  </form>
+                </div>
+              </div>
+            </article>
+            <article class="col-xl-4 col-sm-6">
+              <div class="post-card redius-8 shadow-one border-one">
+                <div class="post-card-header d-flex align-items-center justify-content-between">
+                  <div class="post-card-user d-flex align-items-center">
+                    <img src="assets/images/post/Shiron-Yousefl.png" alt="Shiron Yousefl" class="post-card-user-img rounded-circle">
+                    <div class="post-card-user-identity">
+                      <h3 class="primary-font-600 size-xl primary-color text-capitalize">Shiron Yousefl</h3>
+                      <p class="primary-font-500 size-md text-color3">CEO, MSW</p>
+                    </div>
+                  </div>
+                  <button type="button" class="post-card-dots-line">
+                    <img src="assets/images/post/dots-line.svg" alt="dots">
+                  </button>
+                </div>
+                <div class="post-card-body">
+                  <a href="javascript:void(0)" class="d-block">
+                    <img src="assets/images/post/post-3.png" alt="post img" class="redius-8 w-100" data-lity>
+                  </a>
+                  <div class="post-card-body-wrap">
+                    <div class="post-card-body-date d-flex align-items-center justify-content-between">
+                      <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00 PM</span></p>
+                      <a href="javascript:(voide)" class="">
+                        <img src="assets/images/post/bookmark.svg" alt="bookmark">
+                      </a>
+                    </div>
+                    <div class="post-card-body-text">
+                      <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
+                      <p class="primary-font-400 size-lg l-h-lg-19 primary-color">In comparison to <ins>$GME</ins> <ins>#GME</ins>, where it seems like shorts are taking a break for now. <br><br> Why?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-card-footer d-flex align-items-center justify-content-end">
+                  <button type="button" class="post-card-footer-heart">
+                    <img src="assets/images/post/heart.svg" alt="heart">
+                  </button>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
+                </div>
+                <div class="post-comment-box-wrap">
+                  <form action="#" class="post-comment-box">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Write A Comment....." class="post-comment-box-message rounded-pill"></textarea>
+                    <button type="submit" class="post-comment-box-btn bg-btn bg-color7 rounded-pill primary-font-600 size-md text-color14">Comment</button>
+                  </form>
+                </div>
+              </div>
+            </article>
+            <article class="col-xl-4 col-sm-6">
+              <div class="post-card redius-8 shadow-one border-one">
+                <div class="post-card-header d-flex align-items-center justify-content-between">
+                  <div class="post-card-user d-flex align-items-center">
+                    <img src="assets/images/post/Shiron-Yousefl.png" alt="Shiron Yousefl" class="post-card-user-img rounded-circle">
+                    <div class="post-card-user-identity">
+                      <h3 class="primary-font-600 size-xl primary-color text-capitalize">Shiron Yousefl</h3>
+                      <p class="primary-font-500 size-md text-color3">CEO, MSW</p>
+                    </div>
+                  </div>
+                  <button type="button" class="post-card-dots-line">
+                    <img src="assets/images/post/dots-line.svg" alt="dots">
+                  </button>
+                </div>
+                <div class="post-card-body">
+                  <a href="https://vimeo.com/160521065" class="d-block" data-lity>
+                    <img src="assets/images/post/post-1.png" alt="post img" class="redius-8 w-100">
+                  </a>
+                  <div class="post-card-body-wrap">
+                    <div class="post-card-body-date d-flex align-items-center justify-content-between">
+                      <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00 PM</span></p>
+                      <a href="javascript:(voide)" class="">
+                        <img src="assets/images/post/bookmark.svg" alt="bookmark">
+                      </a>
+                    </div>
+                    <div class="post-card-body-text">
+                      <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
+                      <p class="primary-font-400 size-lg l-h-lg-19 primary-color">In comparison to <ins>$GME</ins> <ins>#GME</ins>, where it seems like shorts are taking a break for now. <br><br> Why?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-card-footer d-flex align-items-center justify-content-end">
+                  <button type="button" class="post-card-footer-heart">
+                    <img src="assets/images/post/heart.svg" alt="heart">
+                  </button>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
+                </div>
+                <div class="post-comment-box-wrap">
+                  <form action="#" class="post-comment-box">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Write A Comment....." class="post-comment-box-message rounded-pill"></textarea>
+                    <button type="submit" class="post-comment-box-btn bg-btn bg-color7 rounded-pill primary-font-600 size-md text-color14">Comment</button>
+                  </form>
+                </div>
+              </div>
+            </article>
+            <article class="col-xl-4 col-sm-6">
+              <div class="post-card redius-8 shadow-one border-one">
+                <div class="post-card-header d-flex align-items-center justify-content-between">
+                  <div class="post-card-user d-flex align-items-center">
+                    <img src="assets/images/post/Shiron-Yousefl.png" alt="Shiron Yousefl" class="post-card-user-img rounded-circle">
+                    <div class="post-card-user-identity">
+                      <h3 class="primary-font-600 size-xl primary-color text-capitalize">Shiron Yousefl</h3>
+                      <p class="primary-font-500 size-md text-color3">CEO, MSW</p>
+                    </div>
+                  </div>
+                  <button type="button" class="post-card-dots-line">
+                    <img src="assets/images/post/dots-line.svg" alt="dots">
+                  </button>
+                </div>
+                <div class="post-card-body">
+                  <a href="https://vimeo.com/160521065" class="d-block" data-lity>
+                    <img src="assets/images/post/post-2.png" alt="post img" class="redius-8 w-100">
+                  </a>
+                  <div class="post-card-body-wrap">
+                    <div class="post-card-body-date d-flex align-items-center justify-content-between">
+                      <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00 PM</span></p>
+                      <a href="javascript:(voide)" class="">
+                        <img src="assets/images/post/bookmark.svg" alt="bookmark">
+                      </a>
+                    </div>
+                    <div class="post-card-body-text">
+                      <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
+                      <p class="primary-font-400 size-lg l-h-lg-19 primary-color">In comparison to <ins>$GME</ins> <ins>#GME</ins>, where it seems like shorts are taking a break for now. <br><br> Why?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-card-footer d-flex align-items-center justify-content-end">
+                  <button type="button" class="post-card-footer-heart">
+                    <img src="assets/images/post/heart.svg" alt="heart">
+                  </button>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
+                </div>
+                <div class="post-comment-box-wrap">
+                  <form action="#" class="post-comment-box">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Write A Comment....." class="post-comment-box-message rounded-pill"></textarea>
+                    <button type="submit" class="post-comment-box-btn bg-btn bg-color7 rounded-pill primary-font-600 size-md text-color14">Comment</button>
+                  </form>
+                </div>
+              </div>
+            </article>
+            <article class="col-xl-4 col-sm-6">
+              <div class="post-card redius-8 shadow-one border-one">
+                <div class="post-card-header d-flex align-items-center justify-content-between">
+                  <div class="post-card-user d-flex align-items-center">
+                    <img src="assets/images/post/Shiron-Yousefl.png" alt="Shiron Yousefl" class="post-card-user-img rounded-circle">
+                    <div class="post-card-user-identity">
+                      <h3 class="primary-font-600 size-xl primary-color text-capitalize">Shiron Yousefl</h3>
+                      <p class="primary-font-500 size-md text-color3">CEO, MSW</p>
+                    </div>
+                  </div>
+                  <button type="button" class="post-card-dots-line">
+                    <img src="assets/images/post/dots-line.svg" alt="dots">
+                  </button>
+                </div>
+                <div class="post-card-body">
+                  <a href="https://vimeo.com/160521065" class="d-block" data-lity>
+                    <img src="assets/images/post/post-3.png" alt="post img" class="redius-8 w-100">
+                  </a>
+                  <div class="post-card-body-wrap">
+                    <div class="post-card-body-date d-flex align-items-center justify-content-between">
+                      <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00 PM</span></p>
+                      <a href="javascript:(voide)" class="">
+                        <img src="assets/images/post/bookmark.svg" alt="bookmark">
+                      </a>
+                    </div>
+                    <div class="post-card-body-text">
+                      <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
+                      <p class="primary-font-400 size-lg l-h-lg-19 primary-color">In comparison to <ins>$GME</ins> <ins>#GME</ins>, where it seems like shorts are taking a break for now. <br><br> Why?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-card-footer d-flex align-items-center justify-content-end">
+                  <button type="button" class="post-card-footer-heart">
+                    <img src="assets/images/post/heart.svg" alt="heart">
+                  </button>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
+                </div>
+                <div class="post-comment-box-wrap">
+                  <form action="#" class="post-comment-box">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Write A Comment....." class="post-comment-box-message rounded-pill"></textarea>
+                    <button type="submit" class="post-comment-box-btn bg-btn bg-color7 rounded-pill primary-font-600 size-md text-color14">Comment</button>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!------ End row ------>
+        </div>
+      </section>
+      <!-- 
+		  =====================================================
+		  End Post Section 
+		  =====================================================
+		-->
+    </main>
+
+
+    <!-- 
+	  ------------------------------------------------
+	  Back To Top Btn
+	  ------------------------------------------------
+	-->
+    <button
+      type="button"
+      id="scroll-up-btn"
+      title="Go to top"
+      class="d-flex align-items-center justify-content-center rounded"
+    >
+      <img src="assets/images/arrow-up.svg" alt="arrow-up" />
+    </button>
+    <!-- 
+	  ------------------------------------------------
+	  Back To Top Btn
+	  ------------------------------------------------
+	-->
+
+    <!--------- jS Here --------->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/lity.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

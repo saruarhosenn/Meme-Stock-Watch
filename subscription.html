@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!---- Author Name ---->
+  <meta name="author" content="Your Name" />
+  <!---- Website Description ---->
+  <meta name="description" content="Website Description" />
+  <!---- Website keywords ---->
+  <meta name="keywords" content="Website keywords" />
+  <!------- Favicon ------->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png" />
+  <!---- Website Title ---->
+  <title>Subscriptions</title>
+  <!-------- Fonts -------->
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  <!------- Css Here ------->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/nice-select.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- Start Loader -->
+  <div class="section-loader">
+    <div class="loader">
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+    </div>
+  </div>
+  <!-- End Loader -->
+
+
+  <!-- 
+	  =====================================================
+	  Start Sidebar Section 
+	  =====================================================
+	-->
+  <aside class="sidebar primary-bg offcanvas offcanvas-start offcanvas-m" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <button class="close-sidebar d-flex align-items-center justify-content-center d-lg-none" data-bs-dismiss="offcanvas"
+      aria-label="Close">
+      <img src="assets/images/sidebar/close-white.svg" alt="close-white">
+    </button>
+    <!-- Sidebar Logo -->
+    <div class="sidebar-logo d-flex align-items-center justify-content-between">
+      <a href="index.html">
+        <img src="assets/images/sidebar-logo.svg" alt="sidebar logo" class="img-fluid">
+      </a>
+      <button type="button" class="sidebar-collapse-btn d-none d-lg-inline-block bg-color6">
+        <img src="assets/images/sidebar/right-angle.svg" alt="right-angle">
+      </button>
+    </div>
+    <!-- Sidebar Menu -->
+    <div class="sidebar-menu">
+      <nav class="sidebar-page-menu">
+        <ul class="sidebar-page-menu-list">
+          <li class="sidebar-page-menu-item">
+            <a href="index.html" class="sidebar-page-menu-link d-flex align-items-center redius-8" title="Dashboard">
+              <img src="assets/images/sidebar/Dashboard.svg" alt="Dashboard" class="sidebar-page-menu-img">
+              <span
+                class="sidebar-page-menu-text primary-font-500 size-2xl text-color4 text-capitalize">Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar-page-menu-item">
+            <a href="subscription.html" class="sidebar-page-menu-link d-flex align-items-center redius-8"
+              title="Subscriptions">
+              <img src="assets/images/sidebar/Subscriptions.svg" alt="Subscriptions" class="sidebar-page-menu-img">
+              <span
+                class="sidebar-page-menu-text primary-font-500 size-2xl text-color4 text-capitalize">Subscriptions</span>
+            </a>
+          </li>
+          <li class="sidebar-page-menu-item">
+            <a href="bookmark.html" class="sidebar-page-menu-link d-flex align-items-center redius-8" title="Bookmark">
+              <img src="assets/images/sidebar/Bookmark.svg" alt="Trading & Market" class="sidebar-page-menu-img">
+              <span class="sidebar-page-menu-text primary-font-500 size-2xl text-color4 text-capitalize">Bookmark</span>
+            </a>
+          </li>
+          <li class="sidebar-page-menu-item">
+            <a href="settings.html" class="sidebar-page-menu-link d-flex align-items-center redius-8" title="Settings">
+              <img src="assets/images/sidebar/Settings.svg" alt="Settings" class="sidebar-page-menu-img">
+              <span class="sidebar-page-menu-text primary-font-500 size-2xl text-color4 text-capitalize">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sidebar-light position-relative bg-color4 text-center redius-16 mx-auto">
+      <img src="assets/images/sidebar/light.svg" alt="sidebar-light" class="sidebar-light-img img-fluid">
+      <p class="sidebar-light-title primary-font-500 size-lg text-color7">Thoughts Time</p>
+      <p class="primary-font-400 size-xl secondary-color">If you aren’t willing to own a stock for 10 years, don’t even
+        think about owning it for 10 minutes.</p>
+    </div>
+    <a href="#" class="sidebar-logout-btn d-flex align-items-center redius-8" title="Logout">
+      <img src="assets/images/sidebar/logout.svg" alt="logout" class="sidebar-logout-img">
+      <p class="sidebar-logout-text primary-font-500 size-2xl text-color4">Logout</p>
+    </a>
+  </aside>
+  <!-- 
+	  =====================================================
+	  End Sidebar Section 
+	  =====================================================
+	-->
+
+
+  <!-- 
+	  =====================================================
+	  Start Header Section 
+	  =====================================================
+	-->
+  <header class="header primary-bg">
+    <div class="header-wrap row align-items-center">
+      <!-- Header Left -->
+      <div class="col-md-3 col-5">
+        <div class="header-left">
+          <div class="header-user-name">
+            <p class="header-user-name-text primary-font-500 size-3xl secondary-color text-capitalize">Hello Matt,</p>
+          </div>
+        </div>
+      </div>
+      <!-- Header Right -->
+      <div class="col-md-9 col-7">
+        <div class="header-right d-flex align-items-center justify-content-end">
+          <button type="button" onclick="openSearch()" class="header-search-open header-right-item d-md-none">
+            <img src="assets/images/header/search-black.svg" alt="search-black">
+          </button>
+          <form action="#" class="header-form header-right-item d-none d-md-block">
+            <input type="text" name="" id="" placeholder="Search for stocks Tips and more"
+              class="header-form-search w-100 redius-8">
+            <svg class="header-form-search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.66683 14C11.1646 14 14.0002 11.1644 14.0002 7.66665C14.0002 4.16884 11.1646 1.33331 7.66683 1.33331C4.16903 1.33331 1.3335 4.16884 1.3335 7.66665C1.3335 11.1644 4.16903 14 7.66683 14Z"
+                stroke="#A49F9F" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.6668 14.6666L13.3335 13.3333" stroke="#A49F9F" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </form>
+          <!-- Header Mobile Search Box -->
+          <div id="headerSearchOverlay" class="header-search-overlay d-md-none">
+            <button type="button" class="header-search-form-closebtn" onclick="closeSearch()" title="Close Overlay">
+              <img src="assets/images/header/close-white.svg" alt="close-white">
+            </button>
+            <div class="header-search-overlay-content">
+              <form action="/action_page.php" class="header-search-form d-flex">
+                <input type="text" placeholder="Search for stocks Tips and more" name="search"
+                  class="header-search-form-input">
+                <button type="submit"
+                  class="header-search-form-btn bg-color7 d-flex align-items-center justify-content-center">
+                  <img src="assets/images/header/search-white.svg" alt="search-white">
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="header-right-item position-relative">
+            <button type="button" class="header-notification position-relative">
+              <img src="assets/images/header/notification.svg" alt="notification">
+              <span class="header-notification-badge rounded-circle bg-color5"></span>
+            </button>
+            <!-- Notification Card -->
+            <div class="notification-card primary-bg">
+              <div class="container-fluid px-0">
+                <div class="row g-4 notification-card-header align-items-center">
+                  <div class="col-sm-6">
+                    <div class="notification-card-header-left d-flex align-items-center">
+                      <p class="primary-font-500 size-xl text-color16">Notifications</p>
+                      <select class="notification-select">
+                        <option data-display="All">All</option>
+                        <option value="1">Today</option>
+                        <option value="2">Yesterday</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <button type="button" class="notification-card-header-right d-flex align-items-center ms-sm-auto">
+                      <p class="primary-font-400 size-xl text-color16 me-2">Mark all as read</p>
+                      <img src="assets/images/notifications/outline.svg" alt="outline">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="notification-card-body">
+                <div class="notification-card-body-item">
+                  <div class="d-flex align-items-start">
+                    <a href="#" class="notification-card-body-user d-block position-relative">
+                      <img src="assets/images/notifications/Lex-Murphy.png" alt="Lex Murphy"
+                        class="notification-card-body-user-img">
+                      <span class="notification-user-badge bg-color8 rounded-circle"></span>
+                    </a>
+                    <div class="notification-card-body-user-wrap">
+                      <a href="#" class="notification-card-body-user-text">
+                        <span class="primary-font-700 size-xl text-color16 d-inline">Lex Murphy</span>
+                        <span class="primary-font-500 size-xl text-color16 d-inline">requested access to</span>
+                        <span class="primary-font-700 size-xl text-color16 d-inline">UNIX directory tree
+                          hierarchy</span>
+                      </a>
+                      <div class="notification-card-body-btn">
+                        <button type="button"
+                          class="notification-card-body-btn-bg bg-btn bg-color7 redius-7 primary-font-500 size-xl text-color14">Accept</button>
+                        <button type="button"
+                          class="notification-card-body-btn-border border-btn redius-7 primary-font-500 size-xl text-color17 border-three">Reject</button>
+                      </div>
+                      <p class="primary-font-500 size-xl text-color18">Today at <span>9:42 AM</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="notification-card-body-item">
+                  <div class="d-flex align-items-start">
+                    <a href="#" class="notification-card-body-user d-block position-relative">
+                      <img src="assets/images/notifications/Ray-Arnold.png" alt="Ray Arnold"
+                        class="notification-card-body-user-img">
+                      <span class="notification-user-badge bg-color8 rounded-circle"></span>
+                    </a>
+                    <div class="notification-card-body-user-wrap">
+                      <a href="#" class="notification-card-body-user-text">
+                        <span class="primary-font-700 size-xl text-color16 d-inline">Ray Arnold</span>
+                        <span class="primary-font-500 size-xl text-color16 d-inline">left 6 comments on</span>
+                        <span class="primary-font-700 size-xl text-color16 d-inline">Isla Nublar SOC2 compliance
+                          report</span>
+                      </a>
+                      <p class="primary-font-500 size-xl text-color18">Yesterday at <span>11:42 PM</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="notification-card-body-item">
+                  <div class="d-flex align-items-start">
+                    <a href="#" class="notification-card-body-user d-block position-relative">
+                      <img src="assets/images/notifications/Dennis-Nedry.png" alt="Ray Arnold"
+                        class="notification-card-body-user-img">
+                    </a>
+                    <div class="notification-card-body-user-wrap">
+                      <a href="#" class="notification-card-body-user-text">
+                        <span class="primary-font-700 size-xl text-color16 d-inline">Dennis Nedry</span>
+                        <span class="primary-font-500 size-xl text-color16 d-inline">commented</span>
+                        <span class="primary-font-700 size-xl text-color16 d-inline">on Isla Nublar SOC2 compliance
+                          report</span>
+                      </a>
+                      <p class="notification-card-body-user-desc primary-font-500 size-xl text-color16">
+                        “Oh, I finished de-bugging the phones, but the system's compiling for eighteen minutes, or
+                        twenty. So, some minor systems may go on and off for a while.”
+                      </p>
+                      <p class="primary-font-500 size-xl text-color18">Yesterday at <span>5:42 PM</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="notification-card-body-item">
+                  <div class="d-flex align-items-start">
+                    <a href="#" class="notification-card-body-user d-block position-relative">
+                      <img src="assets/images/notifications/John-Hammond.png" alt="John Hammond"
+                        class="notification-card-body-user-img">
+                    </a>
+                    <div class="notification-card-body-user-wrap">
+                      <a href="#" class="notification-card-body-user-text">
+                        <span class="primary-font-700 size-xl text-color16 d-inline">John Hammond</span>
+                        <span class="primary-font-500 size-xl text-color16 d-inline">created</span>
+                        <span class="primary-font-700 size-xl text-color16 d-inline">Isla Nublar SOC2 compliance
+                          report</span>
+                      </a>
+                      <p class="primary-font-500 size-xl text-color18">Last Wednesday at <span>11:15 AM</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-right-item">
+            <a href="#" class="header-user-profile">
+              <img src="assets/images/header/user-profile.png" alt="user-profile">
+            </a>
+          </div>
+          <button type="button" class="sidebar-open-btn d-block d-lg-none" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <div class="sidebar-open-btn-line"></div>
+            <div class="sidebar-open-btn-line"></div>
+            <div class="sidebar-open-btn-line"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- 
+	  =====================================================
+	  End Header Section 
+	  =====================================================
+	-->
+
+  <main class="main-content">
+    <!-- 
+		  =====================================================
+		  Start Current Plan Section 
+		  =====================================================
+		-->
+    <section class="current-plan-section">
+      <div class="current-plan-title mb-4">
+        <p class="primary-font-500 size-2xl primary-color text-uppercase">Current plan</p>
+      </div>
+      <div class="current-plan-wrap primary-bg redius-8">
+        <div class="container-fluid px-0">
+          <div class="row gx-4 gy-5 align-items-center">
+            <article class="col-md-4 col-sm-6">
+              <div class="current-plan-package text-center text-sm-start">
+                <h3 class="current-plan-package-title primary-font-700 size-6xl secondary-color">Pro Package</h3>
+              </div>
+            </article>
+            <article class="col-md-4 col-sm-6">
+              <div class="current-plan-month text-center text-sm-end text-md-center">
+                <p class="current-plan-month-title primary-font-400 size-3xl primary-color">$50/ month</p>
+              </div>
+            </article>
+            <article class="col-md-4 col-12">
+              <div class="">
+                <div class="current-plan-btn text-center text-md-end">
+                  <button type="button"
+                    class="current-plan-trigger bg-btn bg-color7 redius-7 primary-font-600 text-color14">Upgrade
+                    plan</button>
+                  <p class="current-plan-btn-date primary-font-400 size-xl l-h-xl-16 primary-color">Your plan renews on
+                    October 1, 2021</p>
+                  <p class="primary-font-400 size-xl l-h-xl-16 primary-color">*To Cancel Please Contact Us</p>
+                </div>
+                <!--****** Upgrade Plan Modal ******-->
+                <div class="pricing-modal bg-color9">
+                  <button class="pricing-modal-close primary-bg d-flex align-items-center justify-content-center">
+                    <img src="assets/images/current-plan/close.svg" alt="close">
+                  </button>
+                  <div class="pricing-modal-content">
+                    <div class="pricing-title text-center">
+                      <h2 class="pricing-title-lg primary-font-600 size-9xl text-color14 mb-4 mb-sm-5">Simple, transparent pricing</h2>
+                      <p class="pricing-title-md primary-font-400 size-5xl text-color6 d-table mx-auto position-relative">Save 16% With Yearly Price Plan</p>
+                    </div>
+                    <div class="pricing-tab-area tab__area">
+                      <!--****** Pricing Tab Button ******-->
+                      <div class="pricing-tab primary-bg d-table mx-auto rounded-pill">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <button
+                            class="pricing-tablinks primary-font-700 size-md text-color19 text-uppercase rounded-pill"
+                            onclick="openTab(event, 'Content1')" id="defaultOpen">MONTHLY</button>
+                          <button
+                            class="pricing-tablinks primary-font-700 size-md text-color19 text-uppercase rounded-pill"
+                            onclick="openTab(event, 'Content2')">YEARLY</button>
+                        </div>
+                      </div>
+                      <!--****** Pricing Tab Hide Content ******-->
+                      <div class="pricing-main-content">
+                        <!-- ***** Pricing Table 1 ***** -->
+                        <div id="Content1" class="pricing-tabcontent">
+                          <div class="container-fluid px-0">
+                            <div class="row pricing-tabcontent-row">
+                              <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="pricing-card primary-bg">
+                                  <div class="pricing-card-header">
+                                    <h3 class="pricing-card-header-price primary-font-700 size-8xl text-color19">
+                                      $20<span class="primary-font-500 size-xl text-color20">/month</span></h3>
+                                    <h4
+                                      class="pricing-card-header-title primary-font-700 size-5xl text-color19 text-capitalize">
+                                      Basic Plan</h4>
+                                  </div>
+                                  <div class="pricing-card-body">
+                                    <div>
+                                      <p class="pricing-card-body-title1 primary-font-500 size-xl text-color20">Choose
+                                        <span class="text-color6">one</span> of the following groups:
+                                      </p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group A: GME & AMC</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group B: AAPL, NVDA, TSLA</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group C: SPY, QQQ</p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div>
+                                      <p class="pricing-card-body-title2 primary-font-500 size-xl text-color20">Service
+                                        Included:</p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Daily Updates Via Videos, Texts, and Charts</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            LDPM - (Liquidity-Driven Price Movements)</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Elliott Wave Forecasts</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Options Positioning Insights</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Dynamic Fibonacci Levels</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Gamma Hedging Heat Maps</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Strucural Invalidation Levels</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Voex Analysis</p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="pricing-card-footer text-center">
+                                    <a href="#"
+                                      class="pricing-card-btn primary-font-700 size-xl text-color19 bg-color10 text-capitalize rounded-pill">Choose
+                                      Plan</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="pricing-card primary-bg">
+                                  <div class="pricing-card-header">
+                                    <h3 class="pricing-card-header-price primary-font-700 size-8xl text-color19">
+                                      $35<span class="primary-font-500 size-xl text-color20">/month</span></h3>
+                                    <h4
+                                      class="pricing-card-header-title primary-font-700 size-5xl text-color19 text-capitalize">
+                                      Advanced Plan</h4>
+                                  </div>
+                                  <div class="pricing-card-body">
+                                    <div>
+                                      <p class="pricing-card-body-title1 primary-font-500 size-xl text-color13">Choose
+                                        any <span class="text-color6">two of the three</span> groups</p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group A: GME & AMC</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group B: AAPL, NVDA, TSLA</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group C: SPY, QQQ</p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div>
+                                      <p class="pricing-card-body-title2 primary-font-500 size-xl text-color20">Service
+                                        Included:</p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Daily Updates Via Videos, Texts, and Charts</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            LDPM - (Liquidity-Driven Price Movements)</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Elliott Wave Forecasts</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Options Positioning Insights</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Dynamic Fibonacci Levels</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Gamma Hedging Heat Maps</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Strucural Invalidation Levels</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Voex Analysis</p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="pricing-card-footer text-center">
+                                    <a href="#"
+                                      class="pricing-card-btn primary-font-700 size-xl text-color19 bg-color10 text-capitalize rounded-pill">Choose
+                                      Plan</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="pricing-card bg-color10 position-relative">
+                                  <button type="button"
+                                    class="pricing-card-top-btn d-table primary-font-700 size-md text-color19 text-uppercase bg-color11 rounded-pill">MOST
+                                    POPULAR</button>
+                                  <div class="pricing-card-header">
+                                    <h3 class="pricing-card-header-price primary-font-700 size-8xl text-color14">
+                                      $45<span class="primary-font-500 size-xl">/month</span>
+                                    </h3>
+                                    <h4
+                                      class="pricing-card-header-title primary-font-700 size-5xl text-color14 text-capitalize">
+                                      Premium Plan
+                                    </h4>
+                                  </div>
+                                  <div class="pricing-card-body">
+                                    <div>
+                                      <p class="pricing-card-body-title1 primary-font-500 size-xl text-color14">
+                                        Access to <span class="text-color19">all three</span> groups
+                                      </p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Group A: GME & AMC
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Group B: AAPL, NVDA, TSLA
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Group C: SPY, QQQ
+                                          </p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div>
+                                      <p class="pricing-card-body-title2 primary-font-500 size-xl text-color14">
+                                        Service Included:
+                                      </p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Daily Updates Via Videos, Texts, and Charts
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            LDPM - (Liquidity-Driven Price Movements)
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Elliott Wave Forecasts
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Options Positioning Insights
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Dynamic Fibonacci Levels
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Gamma Hedging Heat Maps
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Strucural Invalidation Levels
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Voex Analysis
+                                          </p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="pricing-card-footer text-center">
+                                    <a href="#"
+                                      class="pricing-card-btn primary-font-700 size-xl text-color6 bg-color9 text-capitalize rounded-pill">Choose
+                                      Plan</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="pricing-card pricing-card-private bg-color12 position-relative">
+                                  <button type="button"
+                                    class="pricing-card-top-btn d-table primary-font-700 size-md text-color19 text-uppercase bg-color11 rounded-pill">Private</button>
+                                  <div class="pricing-card-header">
+                                    <h3 class="pricing-card-header-price primary-font-700 size-8xl text-color14">
+                                      $150<span class="primary-font-500 size-xl">/month</span>
+                                    </h3>
+                                    <h4
+                                      class="pricing-card-header-title primary-font-700 size-5xl text-color14 text-capitalize">
+                                      Private Discord
+                                    </h4>
+                                  </div>
+                                  <div class="pricing-card-body">
+                                    <p class="pricing-card-body-title1 primary-font-500 size-xl text-color14">
+                                      All services from the Premium Plan, plus:
+                                    </p>
+                                    <ul class="pricing-card-service">
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          Daily video recaps of the day's
+                                          events and forecasts for the
+                                          upcoming day
+                                        </p>
+                                      </li>
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          Custom-made indicators with
+                                          educational videos on how to
+                                          utilize them
+                                        </p>
+                                      </li>
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          FREE unlimited private lessons
+                                        </p>
+                                      </li>
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          Tradytick software featuring
+                                          Bullseye Options Alerts & more
+                                        </p>
+                                      </li>
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          Options alerts from a few
+                                          popular analysts
+                                        </p>
+                                      </li>
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          Daily Elliott wave forecasts on
+                                          15 of the most popular stocks
+                                        </p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="pricing-card-footer text-center">
+                                    <a href="#"
+                                      class="pricing-card-btn primary-font-700 size-xl text-color6 bg-color9 text-capitalize rounded-pill">Choose
+                                      Plan</a>
+                                  </div>
+                                  <div class="pricing-card-circle bg-color13"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- ***** Pricing Table 2 ***** -->
+                        <div id="Content2" class="pricing-tabcontent">
+                          <div class="container-fluid px-0">
+                            <div class="row pricing-tabcontent-row">
+                              <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="pricing-card primary-bg">
+                                  <div class="pricing-card-header">
+                                    <h3 class="pricing-card-header-price primary-font-700 size-8xl text-color19">
+                                      $16<span class="primary-font-500 size-xl text-color20">/month</span></h3>
+                                    <h4
+                                      class="pricing-card-header-title primary-font-700 size-5xl text-color19 text-capitalize">
+                                      Basic Plan</h4>
+                                  </div>
+                                  <div class="pricing-card-body">
+                                    <div>
+                                      <p class="pricing-card-body-title1 primary-font-500 size-xl text-color20">Choose
+                                        <span class="text-color6">one</span> of the following groups:
+                                      </p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group A: GME & AMC</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group B: AAPL, NVDA, TSLA</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group C: SPY, QQQ</p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div>
+                                      <p class="pricing-card-body-title2 primary-font-500 size-xl text-color20">Service
+                                        Included:</p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Daily Updates Via Videos, Texts, and Charts</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            LDPM - (Liquidity-Driven Price Movements)</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Elliott Wave Forecasts</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Options Positioning Insights</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Dynamic Fibonacci Levels</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Gamma Hedging Heat Maps</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Strucural Invalidation Levels</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Voex Analysis</p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="pricing-card-footer text-center">
+                                    <a href="#"
+                                      class="pricing-card-btn primary-font-700 size-xl text-color19 bg-color10 text-capitalize rounded-pill">Choose
+                                      Plan</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="pricing-card primary-bg">
+                                  <div class="pricing-card-header">
+                                    <h3 class="pricing-card-header-price primary-font-700 size-8xl text-color19">
+                                      $29<span class="primary-font-500 size-xl text-color20">/month</span></h3>
+                                    <h4
+                                      class="pricing-card-header-title primary-font-700 size-5xl text-color19 text-capitalize">
+                                      Advanced Plan</h4>
+                                  </div>
+                                  <div class="pricing-card-body">
+                                    <div>
+                                      <p class="pricing-card-body-title1 primary-font-500 size-xl text-color13">Choose
+                                        any <span class="text-color6">two of the three</span> groups</p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group A: GME & AMC</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group B: AAPL, NVDA, TSLA</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Group C: SPY, QQQ</p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div>
+                                      <p class="pricing-card-body-title2 primary-font-500 size-xl text-color20">Service
+                                        Included:</p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Daily Updates Via Videos, Texts, and Charts</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            LDPM - (Liquidity-Driven Price Movements)</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Elliott Wave Forecasts</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Options Positioning Insights</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Dynamic Fibonacci Levels</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Gamma Hedging Heat Maps</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Strucural Invalidation Levels</p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-1.svg" alt="check-circle">
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color20">
+                                            Voex Analysis</p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="pricing-card-footer text-center">
+                                    <a href="#"
+                                      class="pricing-card-btn primary-font-700 size-xl text-color19 bg-color10 text-capitalize rounded-pill">Choose
+                                      Plan</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="pricing-card bg-color10 position-relative">
+                                  <button type="button"
+                                    class="pricing-card-top-btn d-table primary-font-700 size-md text-color19 text-uppercase bg-color11 rounded-pill">MOST
+                                    POPULAR</button>
+                                  <div class="pricing-card-header">
+                                    <h3 class="pricing-card-header-price primary-font-700 size-8xl text-color14">
+                                      $37<span class="primary-font-500 size-xl">/month</span>
+                                    </h3>
+                                    <h4
+                                      class="pricing-card-header-title primary-font-700 size-5xl text-color14 text-capitalize">
+                                      Premium Plan
+                                    </h4>
+                                  </div>
+                                  <div class="pricing-card-body">
+                                    <div>
+                                      <p class="pricing-card-body-title1 primary-font-500 size-xl text-color14">
+                                        Access to <span class="text-color19">all three</span> groups
+                                      </p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Group A: GME & AMC
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Group B: AAPL, NVDA, TSLA
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Group C: SPY, QQQ
+                                          </p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div>
+                                      <p class="pricing-card-body-title2 primary-font-500 size-xl text-color14">
+                                        Service Included:
+                                      </p>
+                                      <ul class="pricing-card-service">
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Daily Updates Via Videos, Texts, and Charts
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            LDPM - (Liquidity-Driven Price Movements)
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Elliott Wave Forecasts
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Options Positioning Insights
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Dynamic Fibonacci Levels
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Gamma Hedging Heat Maps
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Strucural Invalidation Levels
+                                          </p>
+                                        </li>
+                                        <li class="pricing-card-service-item d-flex align-items-start">
+                                          <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                          <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                            Voex Analysis
+                                          </p>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="pricing-card-footer text-center">
+                                    <a href="#"
+                                      class="pricing-card-btn primary-font-700 size-xl text-color6 bg-color9 text-capitalize rounded-pill">Choose
+                                      Plan</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="pricing-card pricing-card-private bg-color12 position-relative">
+                                  <button type="button"
+                                    class="pricing-card-top-btn d-table primary-font-700 size-md text-color19 text-uppercase bg-color11 rounded-pill">Private</button>
+                                  <div class="pricing-card-header">
+                                    <h3 class="pricing-card-header-price primary-font-700 size-8xl text-color14">
+                                      $125<span class="primary-font-500 size-xl">/month</span>
+                                    </h3>
+                                    <h4
+                                      class="pricing-card-header-title primary-font-700 size-5xl text-color14 text-capitalize">
+                                      Private Discord
+                                    </h4>
+                                  </div>
+                                  <div class="pricing-card-body">
+                                    <p class="pricing-card-body-title1 primary-font-500 size-xl text-color14">
+                                      All services from the Premium Plan, plus:
+                                    </p>
+                                    <ul class="pricing-card-service">
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          Daily video recaps of the day's
+                                          events and forecasts for the
+                                          upcoming day
+                                        </p>
+                                      </li>
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          Custom-made indicators with
+                                          educational videos on how to
+                                          utilize them
+                                        </p>
+                                      </li>
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          FREE unlimited private lessons
+                                        </p>
+                                      </li>
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          Tradytick software featuring
+                                          Bullseye Options Alerts & more
+                                        </p>
+                                      </li>
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          Options alerts from a few
+                                          popular analysts
+                                        </p>
+                                      </li>
+                                      <li class="pricing-card-service-item d-flex align-items-start">
+                                        <img src="assets/images/current-plan/check-circle-2.svg" alt="check-circle" />
+                                        <p class="pricing-card-service-text primary-font-500 size-xl l-h-xl-21 text-color14">
+                                          Daily Elliott wave forecasts on
+                                          15 of the most popular stocks
+                                        </p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="pricing-card-footer text-center">
+                                    <a href="#"
+                                      class="pricing-card-btn primary-font-700 size-xl text-color6 bg-color9 text-capitalize rounded-pill">Choose
+                                      Plan</a>
+                                  </div>
+                                  <div class="pricing-card-circle bg-color13"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 
+		  =====================================================
+		  End Current Plan Section 
+		  =====================================================
+		-->
+
+
+    <!-- 
+		  =====================================================
+		  Start Payment Method Section 
+		  =====================================================
+		-->
+    <section class="payment-method-section">
+      <div class="payment-method-title mb-4">
+        <p class="primary-font-500 size-2xl primary-color text-uppercase">PAYMENT METHOD</p>
+      </div>
+      <div class="payment-method-wrap primary-bg redius-8">
+        <div class="container-fluid px-0">
+          <div class="row gx-4 gy-5 align-items-center">
+            <article class="col-md-4 col-sm-6">
+              <form action="#"
+                class="payment-method-form d-flex align-items-center justify-content-center justify-content-sm-start">
+                <img src="assets/images/payment-method/mastercard.png" alt="mastercard" class="img-fluid">
+                <div class="d-flex align-items-center ms-3">
+                  <img src="assets/images/payment-method/dot.svg" alt="dot">
+                  <img src="assets/images/payment-method/dot.svg" alt="dot" class="ms-1">
+                  <img src="assets/images/payment-method/dot.svg" alt="dot" class="ms-1">
+                  <img src="assets/images/payment-method/dot.svg" alt="dot" class="ms-1">
+                  <p class="primary-font-500 size-3xl primary-color ms-1">1234</p>
+                </div>
+              </form>
+            </article>
+            <article class="col-md-4 col-sm-6">
+              <div
+                class="payment-method-month d-flex align-items-center justify-content-center justify-content-sm-end justify-content-md-center">
+                <p class="payment-method-month-title primary-font-400 size-3xl primary-color me-3">Expires 04/2022</p>
+                <img src="assets/images/payment-method/close.svg" alt="close">
+              </div>
+            </article>
+            <article class="col-md-4">
+              <div class="payment-method-btn text-center text-md-end">
+                <button type="button" class="bg-btn bg-color7 redius-7 primary-font-600 text-color14">Add payment
+                  method</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 
+		  =====================================================
+		  End Payment Method Section 
+		  =====================================================
+		-->
+
+
+    <!-- 
+		  =====================================================
+		  Start Billing History Section 
+		  =====================================================
+		-->
+    <section class="billing-history-section">
+      <div class="billing-history-title mb-4">
+        <p class="primary-font-500 size-2xl primary-color text-uppercase">Billing History</p>
+      </div>
+      <div class="billing-history-wrap primary-bg redius-8">
+        <div class="table-responsive">
+          <table class="billing-history-table table">
+            <thead>
+              <tr>
+                <th scope="col" class="primary-font-700 size-2xl text-color11">Renew Date</th>
+                <th scope="col" class="primary-font-700 size-2xl text-color11 text-center">Renew Price</th>
+                <th scope="col" class="primary-font-700 size-2xl text-color11 text-center">Package</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="primary-font-600 size-2xl primary-color me-3">Dec 1, 2020</span>
+                  <img src="assets/images/payment-method/date.svg" alt="date">
+                </td>
+                <td class="text-center primary-font-500 size-2xl primary-color">$10</td>
+                <td class="text-center primary-font-600 size-2xl primary-color">Intro Package</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="primary-font-600 size-2xl primary-color me-3">Dec 1, 2020</span>
+                  <img src="assets/images/payment-method/date.svg" alt="date">
+                </td>
+                <td class="text-center primary-font-500 size-2xl primary-color">$10</td>
+                <td class="text-center primary-font-600 size-2xl primary-color">Pro Package</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="primary-font-600 size-2xl primary-color me-3">Dec 1, 2020</span>
+                  <img src="assets/images/payment-method/date.svg" alt="date">
+                </td>
+                <td class="text-center primary-font-500 size-2xl primary-color">$10</td>
+                <td class="text-center primary-font-600 size-2xl primary-color">Pro Package</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- 
+		  =====================================================
+		  End Billing History Section 
+		  =====================================================
+		-->
+  </main>
+
+
+  <!-- 
+	  ------------------------------------------------
+	  Back To Top Btn
+	  ------------------------------------------------
+	-->
+  <button type="button" id="scroll-up-btn" title="Go to top"
+    class="d-flex align-items-center justify-content-center rounded">
+    <img src="assets/images/arrow-up.svg" alt="arrow-up" />
+  </button>
+  <!-- 
+	  ------------------------------------------------
+	  Back To Top Btn
+	  ------------------------------------------------
+	-->
+
+  <!--------- jS Here --------->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

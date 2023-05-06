@@ -1,0 +1,143 @@
+/*----- Header CSS -----*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  @media #{$md} {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  }
+  .header-wrap {
+    padding: 2.2rem 3.3rem;
+    margin-left: 31.5rem;
+    -moz-transition: margin 0.3s ease-out;
+    -o-transition: margin 0.3s ease-out;
+    -webkit-transition: margin 0.3s ease-out;
+    transition: margin 0.3s ease-out;
+    @media #{$xl} {
+      margin-left: 26rem;
+    }
+    @media #{$lg} {
+      margin-left: 25rem;
+    }
+    @media #{$md} {
+      margin-left: 0;
+      padding: 1.5rem 1.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header-wrap {
+    &.header-slide {
+      margin-left: 8rem;
+      -moz-transition: margin 0.3s ease-out;
+      -o-transition: margin 0.3s ease-out;
+      -webkit-transition: margin 0.3s ease-out;
+      transition: margin 0.3s ease-out;
+    }
+  }
+}
+
+.header-user-name {
+  @media #{$xsm} {
+    .header-user-name-text {
+      font-size: var(--size-xl);
+    }
+  }
+}
+
+.header-right {
+  .header-right-item:not(:last-child) {
+    margin-right: 3.2rem;
+    @media #{$sm} {
+      margin-right: 2rem;
+    }
+    @media only screen and (max-width: 425px) {
+      margin-right: 1rem;
+    }
+  }
+  .header-form {
+    position: relative;
+    width: 100%;
+    max-width: 34.4rem;
+    .header-form-search {
+      background-color: var(--secondary-bg);
+      padding: 0 1.3rem 0 4.7rem;
+      height: 4rem;
+      font-family: var(--primary-font-400);
+      font-size: var(--size-xl);
+      color: var(--primary-color);
+      border: 0.1rem solid transparent;
+      &::placeholder {
+        color: var(--text-color8);
+      }
+      &:focus {
+        border-color: var(--border-2);
+      }
+    }
+    .header-form-search-icon {
+      position: absolute;
+      top: 50%;
+      left: 1.3rem;
+      transform: translateY(-50%);
+    }
+  }
+  .header-search-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    top: -120%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    .header-search-form-closebtn {
+      position: absolute;
+      top: 2rem;
+      right: 3rem;
+    }
+    .header-search-overlay-content {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      @media #{$xsm} {
+        width: 90%;
+      }
+      .header-search-form {
+        .header-search-form-input {
+          padding: 1rem;
+          font-family: var(--primary-font-400);
+          font-size: var(--size-xl);
+          color: var(--primary-color);
+          height: 4.5rem;
+          width: 80%;
+          background-color: var(--primary-bg);
+          &::placeholder {
+            color: var(--text-color8);
+          }
+        }
+        .header-search-form-btn {
+          width: 20%;
+          height: 4.5rem;
+        }
+      }
+    }
+  }
+  .header-notification {
+    z-index: 999;
+    .header-notification-badge {
+      width: 0.7rem;
+      height: 0.7rem;
+      position: absolute;
+      top: 0.3rem;
+      right: 0.4rem;
+    }
+  }
+}
+
