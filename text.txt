@@ -8,6 +8,7 @@ Work Change & Update:
 3. popup image, video এড ---- post.scss
 4. added select-opption ---- home.scss
 5. ক্লিক করার পর সব Comment-box একসাথে ওপেন হওয়া issue solve ---- post.scss & main.js
+6. Comment-box e comment & reply comment addes ---- post.scss & main.js
 
 => Header update:
 -----------------------

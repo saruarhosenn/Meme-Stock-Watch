@@ -1,0 +1,229 @@
+.login-section {
+  min-height: 100vh;
+  padding: 5rem 0;
+  background: linear-gradient(
+    to right,
+    var(--primary-bg) 45%,
+    var(--bg-color9) 5%,
+    var(--bg-color9) 50%
+  );
+  @media #{$md} {
+    background: linear-gradient(
+      to right,
+      var(--primary-bg) 50%,
+      var(--bg-color9) 50%
+    );
+  }
+  @media #{$sm} {
+    background: linear-gradient(
+      to bottom,
+      var(--primary-bg) 50%,
+      var(--primary-bg) 50%
+    );
+  }
+}
+
+.form-row {
+  --bs-gutter-x: 20rem;
+  --bs-gutter-y: 7rem;
+  @media #{$lg} {
+    --bs-gutter-x: 7rem;
+    --bs-gutter-y: 6rem;
+  }
+  @media #{$md} {
+    --bs-gutter-x: 5rem;
+    --bs-gutter-y: 5rem;
+  }
+  @media only screen and (max-width: 425px) {
+    --bs-gutter-x: 0rem;
+  }
+}
+
+.login-wrap {
+  padding: 0rem 10rem !important;
+  @media #{$lg} {
+    padding: 0rem 5rem !important;
+  }
+  @media #{$md} {
+    padding: 0rem 4rem !important;
+  }
+  @media only screen and (max-width: 425px) {
+    padding: 0rem 1.5rem !important;
+  }
+}
+
+.form-col {
+  flex: 0 0 auto;
+  width: 45%;
+  @media #{$md} {
+    width: 50%;
+  }
+  @media #{$sm} {
+    width: 100%;
+  }
+}
+
+.form-img-col {
+  flex: 0 0 auto;
+  width: 55%;
+  @media #{$md} {
+    width: 50%;
+  }
+  @media #{$sm} {
+    width: 100%;
+  }
+}
+
+.re-lo-form-title-wrap {
+  @media #{$md} {
+    .re-lo-form-title {
+      font-size: 2.6rem;
+    }
+    .re-lo-form-desc {
+      font-size: 1.4rem;
+    }
+  }
+}
+.form-tab {
+  overflow: hidden;
+  border: 0.1rem solid var(--border-10);
+  margin-bottom: 4rem;
+  .form-tablinks {
+    padding: 1.4rem 3rem;
+    flex-grow: 1;
+    &.active {
+      background-color: var(--bg-color10);
+    }
+  }
+}
+
+.form-main-content {
+  .form-tabcontent {
+    display: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffects 1s;
+  }
+}
+
+@-webkit-keyframes fadeEffects {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffects {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.form-tabcontent {
+  .re-lo-form:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .re-lo-form-title-wrap {
+    .re-lo-form-title {
+      margin-bottom: 1.7rem;
+    }
+  }
+  .re-lo-form {
+    .re-lo-form-label {
+      margin-bottom: 1.5rem;
+      @media #{$md} {
+        font-size: 1.6rem;
+      }
+    }
+    .re-lo-form-input {
+      font-family: var(--primary-font-400);
+      font-size: var(--size-2xl);
+      color: var(--text-color19);
+      height: 7rem;
+      border: 0.1rem solid var(--border-10);
+      border-radius: 0.6rem;
+      padding: 1.5rem;
+      @media #{$md} {
+        font-size: var(--size-xl);
+      }
+      @media #{$sm} {
+        height: 6rem;
+      }
+      @media #{$xsm} {
+        height: 5.5rem;
+      }
+      &::placeholder {
+        color: var(--text-color3);
+      }
+    }
+    .hide-pass-icon {
+      position: absolute;
+      top: 50%;
+      right: 1.5rem;
+      transform: translateY(-50%);
+      cursor: pointer;
+      z-index: 99;
+    }
+    .re-lo-form-check {
+      cursor: pointer;
+      .re-lo-form-check-input {
+        cursor: pointer;
+        --bs-form-check-bg: #c4c4c4;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 0.2rem;
+      }
+      .form-check-label {
+        cursor: pointer;
+      }
+    }
+    .re-lo-form-forgot:hover {
+      color: var(--text-color9);
+    }
+
+  }
+  .re-lo-form-forgot-wrap {
+    @media only screen and (max-width: 375px) {
+      flex-direction: column;
+      align-items: flex-start !important;
+      .re-lo-form-forgot {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .re-lo-form-btn {
+    padding: 1rem;
+    &:hover {
+      background-color: var(--bg-color7);
+    }
+  }
+}
+
+.login-img-wrap {
+  .login-img-desc {
+    margin: 2.3rem 0 6.7rem;
+  }
+  @media #{$md} {
+    .login-img-title {
+      font-size: 2.6rem;
+    }
+    .login-img-desc {
+      font-size: 1.4rem;
+    }
+  }
+  @media #{$sm} {
+    .login-img-title {
+      color: var(--text-color19);
+    }
+    .login-img-desc {
+      color: var(--text-color3);
+    }
+  }
+}
+

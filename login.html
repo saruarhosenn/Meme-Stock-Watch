@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!---- Author Name ---->
+    <meta name="author" content="Your Name" />
+    <!---- Website Description ---->
+    <meta name="description" content="Website Description" />
+    <!---- Website keywords ---->
+    <meta name="keywords" content="Website keywords" />
+    <!------- Favicon ------->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+    <!---- Website Title ---->
+    <title>Register</title>
+    <!-------- Fonts -------->
+    <link rel="stylesheet" href="assets/fonts/fonts.css" />
+    <!------- Css Here ------->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Start Loader -->
+    <div class="section-loader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+        </div>
+    </div>
+    <!-- End Loader -->
+
+
+    <main>
+
+        <!-- 
+		  =====================================================
+		  Start Stock Forecasting Section 
+		  =====================================================
+		-->
+        <section class="login-section d-flex align-items-center">
+            <div class="login-wrap container-fluid px-0">
+                <div class="row form-row align-items-center">
+                    <div class="form-col">
+                        <div class="form-area">
+                            <div class="form-tab primary-bg d-table mx-auto rounded-pill">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <button class="form-tablinks primary-font-700 size-lg text-color19 rounded-pill"
+                                        onclick="openForm(event, 'Register')" id="defaultFormOpen">Register</button>
+                                    <button class="form-tablinks primary-font-700 size-lg text-color19 rounded-pill"
+                                        onclick="openForm(event, 'Login')">Login</button>
+                                </div>
+                            </div>
+                            <div class="form-main-content">
+                                <!-- ********** Register ********** -->
+                                <form action="#" id="Register" class="form-tabcontent">
+                                    <div class="re-lo-form-title-wrap re-lo-form">
+                                        <h2 class="re-lo-form-title primary-font-600 size-8xl text-color19">Register
+                                        </h2>
+                                        <p class="re-lo-form-desc primary-font-400 size-2xl text-color3">Please Fill
+                                            this
+                                            field to complete your Registration, and get up-to date information of
+                                            stocks.
+                                        </p>
+                                    </div>
+                                    <div class="re-lo-form">
+                                        <label for="re-email"
+                                            class="re-lo-form-label primary-font-600 size-3xl text-color19 text-capitalize">Email
+                                            Address</label>
+                                        <input type="email" name="" id="re-email" placeholder="yourname@email.com"
+                                            class="re-lo-form-input w-100">
+                                    </div>
+                                    <div class="re-lo-form">
+                                        <label for="re-full-name"
+                                            class="re-lo-form-label primary-font-600 size-3xl text-color19 text-capitalize">Full
+                                            Name</label>
+                                        <input type="text" name="" id="re-full-name" placeholder="John Smith"
+                                            class="re-lo-form-input w-100">
+                                    </div>
+                                    <div class="re-lo-form">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <label for="re-ppassword"
+                                                class="re-lo-form-label primary-font-600 size-3xl text-color19 text-capitalize">Password</label>
+                                            <p
+                                                class="primary-font-400 size-lg text-color19 d-table bg-color10 rounded-pill py-2 px-5">
+                                                Strong..</p>
+                                        </div>
+                                        <div class="position-relative">
+                                            <input type="password" name="" id="re-ppassword"
+                                                placeholder="Type your password here" class="re-lo-form-input w-100">
+                                            <img src="assets/images/login/eye.svg" alt="eye" class="hide-pass-icon"
+                                                onclick="hidePassIcon()">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="re-lo-form re-lo-form-forgot-wrap d-flex align-items-center justify-content-between">
+                                        <div class="re-lo-form-check form-check">
+                                            <input class="re-lo-form-check-input form-check-input" type="checkbox"
+                                                value="" id="flexCheckDefault">
+                                            <label
+                                                class="form-check-label primary-font-400 size-xl l-h-xl-21 text-color3"
+                                                for="flexCheckDefault">
+                                                Remember me?
+                                            </label>
+                                        </div>
+                                        <a href="#"
+                                            class="re-lo-form-forgot primary-font-400 size-2xl text-color6">Forgot
+                                            Passowrd?</a>
+                                    </div>
+                                    <button type="submit"
+                                        class="re-lo-form-btn primary-font-700 size-3xl text-color14 bg-color8 redius-8 w-100">Send</button>
+                                </form>
+                                <!-- ********** Login ********** -->
+                                <form action="#" id="Login" class="form-tabcontent">
+                                    <div class="re-lo-form-title-wrap re-lo-form">
+                                        <h2 class="re-lo-form-title primary-font-600 size-8xl text-color19">Login</h2>
+                                        <p class="re-lo-form-descc primary-font-400 size-2xl text-color3">Lorem Ipsum is
+                                            simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                    <div class="re-lo-form">
+                                        <label for="lo-email"
+                                            class="re-lo-form-label primary-font-600 size-3xl text-color19 text-capitalize">Your
+                                            Email</label>
+                                        <input type="email" name="" id="lo-email" placeholder="yourname@email.com"
+                                            class="re-lo-form-input w-100">
+                                    </div>
+                                    <div class="re-lo-form">
+                                        <label for="lo-ppassword"
+                                            class="re-lo-form-label primary-font-600 size-3xl text-color19 text-capitalize">Enter
+                                            Your Password</label>
+                                        <div class="position-relative">
+                                            <input type="password" name="" id="lo-ppassword"
+                                                placeholder="Type your password here" class="re-lo-form-input w-100">
+                                            <img src="assets/images/login/eye.svg" alt="eye" class="hide-pass-icon"
+                                                onclick="hidePassIcon2()">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="re-lo-form re-lo-form-forgot-wrap d-flex align-items-center justify-content-between">
+                                        <div class="re-lo-form-check form-check">
+                                            <input class="re-lo-form-check-input form-check-input" type="checkbox"
+                                                value="" id="flexCheckDefault2">
+                                            <label
+                                                class="form-check-label primary-font-400 size-xl l-h-xl-21 text-color3"
+                                                for="flexCheckDefault2">
+                                                Remember me?
+                                            </label>
+                                        </div>
+                                        <a href="#"
+                                            class="re-lo-form-forgot primary-font-400 size-2xl text-color6">Forgot
+                                            Passowrd ?</a>
+                                    </div>
+                                    <button type="submit"
+                                        class="re-lo-form-btn primary-font-700 size-3xl text-color14 bg-color8 redius-8 w-100">LogIn</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-img-col">
+                        <div class="login-img-wrap text-center">
+                            <h2 class="login-img-title primary-font-600 size-8xl text-color14">Get Stock Update Daily
+                            </h2>
+                            <p class="login-img-desc primary-font-400 size-xl text-color14 l-h-xl-21">At MemeStockWatch,
+                                we strive to stay on top of the latest trends and developments in the stock market, and
+                                we believe that our unique approach sets us apart from other financial websites.</p>
+                            <img src="assets/images/login/login-img.png" alt="login-img" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+		  =====================================================
+		  Start Stock Forecasting Section 
+		  =====================================================
+		-->
+
+    </main>
+
+
+    <!-- 
+	  ------------------------------------------------
+	  Back To Top Btn
+	  ------------------------------------------------
+	-->
+    <button type="button" id="scroll-up-btn" title="Go to top"
+        class="d-flex align-items-center justify-content-center rounded">
+        <img src="assets/images/arrow-up.svg" alt="arrow-up" />
+    </button>
+    <!-- 
+	  ------------------------------------------------
+	  Back To Top Btn
+	  ------------------------------------------------
+	-->
+
+
+    <!--------- jS Here --------->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>

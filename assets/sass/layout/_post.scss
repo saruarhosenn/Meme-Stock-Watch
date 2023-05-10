@@ -61,14 +61,57 @@
 
 .post-comment-box-wrap {
   padding: 0.5rem 1.5rem 2rem;
+  .post-comment-box {
+    border-top: 0.1rem solid var(--border-9);
+  }
 }
 
-.post-comment-box {
+.show-comment-container {
+  margin-top: 2rem;
+  border-bottom: 0.1rem solid var(--border-9);
+  padding-bottom: 2rem;
+  .show-comment-wrap:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.show-comment-wrap {
+  .show-comment {
+    .show-comment-user {
+      .show-comment-user-img {
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+      }
+    }
+  }
+  .show-user-comment {
+    margin: 0.7rem 0 0.5rem;
+  }
+}
+
+.post-like-reply-wrap {
+  .post-like-reply-left {
+    .post-like-number {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.comment-reply-wrapper {
+  margin-top: 1rem;
+  border-left: 0.2rem dashed #E7E7ED;
+  padding-left: 1.3rem;
+  .show-comment-wrap:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.post-comment-box-form {
   padding-top: 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-  border-top: 0.1rem solid var(--border-9);
   @media only screen and (max-width: 1300px) {
     flex-direction: column;
   }
@@ -131,7 +174,7 @@
       margin-left: auto;
     }
     @media only screen and (max-width: 650px) {
-      margin-left:0;
+      margin-left: 0;
     }
     @media only screen and (max-width: 375px) {
       margin-left: auto;
