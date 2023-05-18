@@ -1498,6 +1498,7 @@ Home Page Style CSS
 .dropdown-wrap .dropdown-menu {
   border: 0;
   padding: 0;
+  z-index: 99;
 }
 .dropdown-wrap .dropdown-menu .dropdown-item {
   font-family: var(--primary-font-500);
