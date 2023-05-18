@@ -24,6 +24,7 @@ Update sidebar.scss file
 -------------------------------
 1. subscription page এর current-plan section এর ডিলিট করা হয়ছে cancel-plan button
 2. এড Pricing card 
+3. Popular & Private Card vertically alignment 
 Update subscription.scss file
 
 => Bookmark page update:

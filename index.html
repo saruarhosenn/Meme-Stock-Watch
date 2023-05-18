@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="assets/fonts/fonts.css" />
   <!------- Css Here ------->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/nice-select.css" />
   <link rel="stylesheet" href="assets/css/lity.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -383,19 +382,18 @@
         <div class="home-post-title post-title d-flex align-items-center justify-content-between">
           <h2 class="primary-font-500 size-6xl secondary-color text-capitalize">Today’s Update</h2>
           <div class="post-select d-flex align-items-center justify-content-end">
-            <select class="mem-stock-select">
-              <option data-display="Meme Stock">Meme Stock</option>
-              <option value="1">All</option>
-              <option value="2">Blue chip Stock</option>
-              <option value="3">ETF</option>
-              <option value="4">Wheel Strategy</option>
-            </select>
-            <select class="mem-stock-select">
-              <option data-display="All">All</option>
-              <option value="1">AMC</option>
-              <option value="2">BBBY</option>
-              <option value="3">GME</option>
-            </select>
+            <div class="dropdown-wrap dropdown">
+              <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Meme Stock
+              </button>
+              <ul class="dropdown-menu shadow-tow">
+                <li><a class="dropdown-item" href="#">Meme Stock</a></li>
+                <li><a class="dropdown-item" href="#">All</a></li>
+                <li><a class="dropdown-item" href="#">Blue chip Stock</a></li>
+                <li><a class="dropdown-item" href="#">ETF</a></li>
+                <li><a class="dropdown-item" href="#">Wheel Strategy</a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <!----- Start row ----->
@@ -1330,10 +1328,9 @@
 
   <!--------- jS Here --------->
   <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>
   <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/jquery.nice-select.min.js"></script>
   <script src="assets/js/lity.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/script.js"></script>

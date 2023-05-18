@@ -196,6 +196,10 @@ Subscription Page Style CSS
 .pricing-card {
   padding: 3.6rem 3.6rem 4.6rem;
   border-radius: 2.3rem;
+  transition: all 0.4s linear;
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
   @media #{$xl} {
     padding: 3.6rem 2.5rem 3rem;
   }
@@ -252,6 +256,29 @@ Subscription Page Style CSS
   margin-top: 2.8rem;
   .pricing-card-btn {
     padding: 1rem 5rem;
+  }
+}
+
+/******* Popular & Private Card vertically alignment *******/
+.popular-pricing-card {
+  .pricing-card-body {
+    .pricing-card-service-1 {
+      margin-top: 3.6rem;
+    }
+  }
+}
+
+.pricing-card-private {
+  .pricing-card-body {
+    .pricing-card-service {
+      margin-top: 3rem;
+      .pricing-card-service-item:not(:last-child) {
+        margin-bottom: 1.8rem;
+      }
+    }
+  }
+  .pricing-card-footer {
+    margin-top: 7.8rem;
   }
 }
 

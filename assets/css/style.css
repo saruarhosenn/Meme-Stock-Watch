@@ -1466,64 +1466,49 @@ Home Page Style CSS
   }
 }
 
-.mem-stock-select {
-  padding-left: 1rem;
-  padding-right: 3rem !important;
-  border: 0;
+.dropdown-wrap .dropdown-toggle {
   font-family: var(--primary-font-500);
   font-size: var(--size-3xl);
   padding-right: 2rem;
   color: var(--text-color11);
-  background-color: transparent;
-  height: 2.5rem;
-  line-height: 2.5rem;
 }
 @media only screen and (max-width: 1399px) {
-  .mem-stock-select {
+  .dropdown-wrap .dropdown-toggle {
     font-size: var(--size-2xl);
   }
 }
-.mem-stock-select::after {
+.dropdown-wrap .dropdown-toggle::after {
+  position: absolute;
+  border: 0;
   border-bottom: 2px solid var(--border-2);
   border-right: 2px solid var(--border-2);
   height: 1.2rem;
   width: 1.2rem;
-  right: 1.2rem;
+  right: 0;
+  top: 50%;
   transform: translateY(-50%) rotate(45deg);
+  margin-top: -0.4rem;
 }
 @media only screen and (max-width: 1399px) {
-  .mem-stock-select::after {
+  .dropdown-wrap .dropdown-toggle::after {
     height: 0.9rem;
     width: 0.9rem;
   }
 }
-.mem-stock-select.open::after {
-  transform: translateY(-50%) rotate(-135deg);
+.dropdown-wrap .dropdown-menu {
+  border: 0;
+  padding: 0;
 }
-.mem-stock-select .list {
-  background-color: var(--primary-bg);
-  border-radius: 0.8rem;
-  box-shadow: 0px 10.6296px 11.6926px rgba(0, 0, 0, 0.1);
-  z-index: 99;
-}
-.mem-stock-select .option {
+.dropdown-wrap .dropdown-menu .dropdown-item {
   font-family: var(--primary-font-500);
   font-size: var(--size-2xl);
   color: var(--primary-color);
-  line-height: 3.7rem;
-  min-height: 3.7rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 0.5rem 1rem;
 }
 @media only screen and (max-width: 1399px) {
-  .mem-stock-select .option {
+  .dropdown-wrap .dropdown-menu .dropdown-item {
     font-size: var(--size-xl);
   }
-}
-.mem-stock-select .option:hover,
-.mem-stock-select .option.focus,
-.mem-stock-select .option.selected.focus {
-  background-color: var(--body-bg);
 }
 
 /* 
@@ -1716,6 +1701,10 @@ Subscription Page Style CSS
 .pricing-card {
   padding: 3.6rem 3.6rem 4.6rem;
   border-radius: 2.3rem;
+  transition: all 0.4s linear;
+}
+.pricing-card:hover {
+  transform: translateY(-0.5rem);
 }
 @media only screen and (max-width: 1399px) {
   .pricing-card {
@@ -1769,6 +1758,21 @@ Subscription Page Style CSS
 }
 .pricing-card-footer .pricing-card-btn {
   padding: 1rem 5rem;
+}
+
+/******* Popular & Private Card vertically alignment *******/
+.popular-pricing-card .pricing-card-body .pricing-card-service-1 {
+  margin-top: 3.6rem;
+}
+
+.pricing-card-private .pricing-card-body .pricing-card-service {
+  margin-top: 3rem;
+}
+.pricing-card-private .pricing-card-body .pricing-card-service .pricing-card-service-item:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+.pricing-card-private .pricing-card-footer {
+  margin-top: 7.8rem;
 }
 
 /*---- Payment Method Section ----*/
