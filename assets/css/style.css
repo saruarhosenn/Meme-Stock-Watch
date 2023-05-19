@@ -22,20 +22,6 @@ Variables
   --size-lg: 1.2rem;
   --size-md: 1rem;
   --size-sm: 0.9rem;
-  /*
-  51(1)
-  32(41)
-  30(36)
-  26(39)
-  24(28)
-  22(33)
-  20(24)
-  16(19, 30)
-  14(21, 22, 16)
-  12(19)
-  10(15)
-  9(14)
-  */
   /*________ Text Color ________*/
   --primary-color: #0D4C92;
   --secondary-color: #2c2c2c;
@@ -961,6 +947,11 @@ Reuseble Layout CSS
   top: 0.3rem;
   right: 0.4rem;
 }
+.header-right .header-user-profile img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+}
 
 /*----- Sidebar CSS -----*/
 .offcanvas-backdrop {
@@ -1280,11 +1271,22 @@ Reuseble Layout CSS
 .post-card .post-card-body .post-card-body-text .post-card-body-title {
   margin-bottom: 0.8rem;
 }
+.post-card .post-card-body .post-card-body-text .read-more-btn {
+  text-decoration: underline;
+}
 .post-card .post-card-footer {
   padding: 1.3rem 1.5rem 1.5rem;
 }
 .post-card .post-card-footer .post-card-footer-heart {
   margin-right: 1.6rem;
+}
+
+.post-more-text {
+  display: none;
+}
+
+.show-content .post-more-text {
+  display: block;
 }
 
 .post-comment-box-wrap {

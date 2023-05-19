@@ -49,6 +49,9 @@
       .post-card-body-title {
         margin-bottom: 0.8rem;
       }
+      .read-more-btn {
+        text-decoration: underline;
+      }
     }
   }
   .post-card-footer {
@@ -57,6 +60,14 @@
       margin-right: 1.6rem;
     }
   }
+}
+
+.post-more-text {
+  display: none;
+}
+
+.show-content .post-more-text {
+  display: block;
 }
 
 .post-comment-box-wrap {

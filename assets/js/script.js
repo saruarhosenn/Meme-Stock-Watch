@@ -4,7 +4,27 @@ window.addEventListener("load", vanish);
 
 function vanish() {
   loader.classList.add("disppear");
-}
+};
+
+/* ============= Post Read More, Read Less Button ============= */
+document.addEventListener("DOMContentLoaded", function () {
+  var readMoreBtns = document.getElementsByClassName("read-more-btn");
+
+  for (var i = 0; i < readMoreBtns.length; i++) {
+    readMoreBtns[i].addEventListener("click", function (e) {
+      e.preventDefault();
+      var content = e.target.parentNode;
+      var moreText = content.getElementsByClassName("post-more-text")[0];
+      content.classList.toggle("show-content");
+
+      if (content.classList.contains("show-content")) {
+        e.target.innerHTML = "Read Less";
+      } else {
+        e.target.innerHTML = "Read More";
+      }
+    });
+  }
+});
 
 /* ============= Scroll Back To Top Button ============= */
 var mybutton = document.getElementById("scroll-up-btn");
@@ -63,11 +83,13 @@ function openTab(evt, contentName) {
   }
   pricingTabLinks = document.getElementsByClassName("pricing-tablinks");
   for (i = 0; i < pricingTabLinks.length; i++) {
-    pricingTabLinks[i].className = pricingTabLinks[i].className.replace(" active", "");
+    pricingTabLinks[i].className = pricingTabLinks[i].className.replace(
+      " active",
+      ""
+    );
   }
   document.getElementById(contentName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-
