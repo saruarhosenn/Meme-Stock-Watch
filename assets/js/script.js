@@ -4,7 +4,7 @@ window.addEventListener("load", vanish);
 
 function vanish() {
   loader.classList.add("disppear");
-};
+}
 
 /* ============= Post Read More, Read Less Button ============= */
 document.addEventListener("DOMContentLoaded", function () {
@@ -24,6 +24,28 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+});
+
+/* ============= Bookmark Toggle Active Color ============= */
+const bookmarkSvg = document.querySelectorAll(".bookmark-svg");
+
+function bookmarkToggleColor() {
+  this.classList.toggle("active");
+}
+
+bookmarkSvg.forEach((svgIcon) => {
+  svgIcon.addEventListener("click", bookmarkToggleColor);
+});
+
+/* ============= Heart & Like Toggle Active Color ============= */
+const heartAndLikeIcon = document.querySelectorAll(".active-blue-color");
+
+function heartToggleColor() {
+  this.classList.toggle("active");
+}
+
+heartAndLikeIcon.forEach((svgIcon) => {
+  svgIcon.addEventListener("click", heartToggleColor);
 });
 
 /* ============= Scroll Back To Top Button ============= */
@@ -91,5 +113,4 @@ function openTab(evt, contentName) {
   document.getElementById(contentName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-// Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();

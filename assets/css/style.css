@@ -1268,6 +1268,15 @@ Reuseble Layout CSS
 .post-card .post-card-body .post-card-body-date {
   margin: 1.5rem 0 0.8rem;
 }
+.post-card .post-card-body .post-card-body-date .bookmark-svg {
+  cursor: pointer;
+}
+.post-card .post-card-body .post-card-body-date .bookmark-svg.active {
+  fill: #0d4c92;
+}
+.post-card .post-card-body .post-card-body-date .bookmark-svg.active path {
+  stroke: #0d4c92;
+}
 .post-card .post-card-body .post-card-body-text .post-card-body-title {
   margin-bottom: 0.8rem;
 }
@@ -1279,6 +1288,16 @@ Reuseble Layout CSS
 }
 .post-card .post-card-footer .post-card-footer-heart {
   margin-right: 1.6rem;
+}
+
+.active-blue-color {
+  cursor: pointer;
+}
+.active-blue-color.active {
+  fill: #5d5fef;
+}
+.active-blue-color.active path {
+  stroke: #5d5fef;
 }
 
 .post-more-text {
@@ -1320,7 +1339,7 @@ Reuseble Layout CSS
 
 .comment-reply-wrapper {
   margin-top: 1rem;
-  border-left: 0.2rem dashed #E7E7ED;
+  border-left: 0.2rem dashed #e7e7ed;
   padding-left: 1.3rem;
 }
 .comment-reply-wrapper .show-comment-wrap:not(:last-child) {

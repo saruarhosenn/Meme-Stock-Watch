@@ -44,13 +44,12 @@
     }
   });
 
+  /* ===== Nice Select JS ===== */
+  $(".notification-select").niceSelect();
+
   /* ===== Counter Up JS ===== */
   $(".counter").counterUp({
     delay: 10,
     time: 1000,
   });
-
-  /* ===== Nice Select JS ===== */
-  $(".mem-stock-select").niceSelect();
-  $(".notification-select").niceSelect();
 })(jQuery);

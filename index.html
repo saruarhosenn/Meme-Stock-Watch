@@ -20,6 +20,7 @@
   <!------- Css Here ------->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/lity.min.css" />
+  <link rel="stylesheet" href="assets/css/nice-select.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -421,9 +422,12 @@
                   <div class="post-card-body-date d-flex align-items-center justify-content-between">
                     <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00
                         PM</span></p>
-                    <a href="javascript:(voide)" class="">
-                      <img src="assets/images/post/bookmark.svg" alt="bookmark">
-                    </a>
+                    <svg class="bookmark-svg" width="16" height="19" viewBox="0 0 16 19" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9704 0.684937H3.10005C2.01431 0.684937 1.12598 1.53531 1.12598 2.57465V17.6923L8.03523 14.8578L14.9445 17.6923V2.57465C14.9445 1.53531 14.0561 0.684937 12.9704 0.684937Z"
+                        stroke="#0D4C92" stroke-width="1.06296" />
+                    </svg>
                   </div>
                   <div class="post-card-body-text">
                     <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
@@ -440,14 +444,14 @@
                 </div>
               </div>
               <div class="post-card-footer d-flex align-items-center justify-content-end">
-                <button type="button" class="post-card-footer-heart">
-                  <img src="assets/images/post/heart.svg" alt="heart">
-                </button>
-                <button type="button" class="post-card-footer-comment">
-                  <img src="assets/images/post/comment.svg" alt="comment">
-                </button>
+                <svg class="post-card-footer-heart active-blue-color" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.01911 0.632813C2.94463 0.632813 0.858887 3.47544 0.858887 6.60838C0.858887 11.9791 4.99582 14.1928 10.2819 17.6402C15.568 14.1928 19.7049 11.9791 19.7049 6.60838C19.7049 3.47544 17.6192 0.632813 14.5447 0.632813C12.5658 0.632813 10.9393 1.75172 10.2819 2.42305C9.62448 1.75172 7.99798 0.632813 6.01911 0.632813Z" stroke="#6425FE" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
               </div>
-              <div class="post-comment-box-wrap">
+              <div class="post-comment-box-wrap" id="post-comment-box-wrap">
                 <div class="post-comment-box">
                   <!-- ************ User Comment Container *********** -->
                   <div class="show-comment-container">
@@ -477,9 +481,9 @@
                             <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                           </button>
                         </div>
-                        <button type="button" class="post-like-btn"><img src="assets/images/post/like-blue.svg"
-                            alt="like-blue"></button>
-                        </button>
+                        <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
                       </div>
                       <!-- *********** All Reply Comments Wrapper ********** -->
                       <div class="comment-reply-wrapper">
@@ -508,8 +512,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                         <!-- ******* Reply Comment 2 ****** -->
@@ -537,8 +542,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                       </div>
@@ -577,9 +583,12 @@
                   <div class="post-card-body-date d-flex align-items-center justify-content-between">
                     <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00
                         PM</span></p>
-                    <a href="javascript:(voide)" class="">
-                      <img src="assets/images/post/bookmark.svg" alt="bookmark">
-                    </a>
+                    <svg class="bookmark-svg" width="16" height="19" viewBox="0 0 16 19" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9704 0.684937H3.10005C2.01431 0.684937 1.12598 1.53531 1.12598 2.57465V17.6923L8.03523 14.8578L14.9445 17.6923V2.57465C14.9445 1.53531 14.0561 0.684937 12.9704 0.684937Z"
+                        stroke="#0D4C92" stroke-width="1.06296" />
+                    </svg>
                   </div>
                   <div class="post-card-body-text">
                     <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
@@ -596,14 +605,14 @@
                 </div>
               </div>
               <div class="post-card-footer d-flex align-items-center justify-content-end">
-                <button type="button" class="post-card-footer-heart">
-                  <img src="assets/images/post/heart.svg" alt="heart">
-                </button>
-                <button type="button" class="post-card-footer-comment">
-                  <img src="assets/images/post/comment.svg" alt="comment">
-                </button>
+                <svg class="post-card-footer-heart active-blue-color" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.01911 0.632813C2.94463 0.632813 0.858887 3.47544 0.858887 6.60838C0.858887 11.9791 4.99582 14.1928 10.2819 17.6402C15.568 14.1928 19.7049 11.9791 19.7049 6.60838C19.7049 3.47544 17.6192 0.632813 14.5447 0.632813C12.5658 0.632813 10.9393 1.75172 10.2819 2.42305C9.62448 1.75172 7.99798 0.632813 6.01911 0.632813Z" stroke="#6425FE" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
               </div>
-              <div class="post-comment-box-wrap">
+              <div class="post-comment-box-wrap" id="post-comment-box-wrap">
                 <div class="post-comment-box">
                   <!-- ************ User Comment Container *********** -->
                   <div class="show-comment-container">
@@ -633,9 +642,9 @@
                             <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                           </button>
                         </div>
-                        <button type="button" class="post-like-btn"><img src="assets/images/post/like-blue.svg"
-                            alt="like-blue"></button>
-                        </button>
+                        <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
                       </div>
                       <!-- *********** All Reply Comments Wrapper ********** -->
                       <div class="comment-reply-wrapper">
@@ -664,8 +673,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                         <!-- ******* Reply Comment 2 ****** -->
@@ -693,8 +703,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                       </div>
@@ -733,9 +744,12 @@
                   <div class="post-card-body-date d-flex align-items-center justify-content-between">
                     <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00
                         PM</span></p>
-                    <a href="javascript:(voide)" class="">
-                      <img src="assets/images/post/bookmark.svg" alt="bookmark">
-                    </a>
+                    <svg class="bookmark-svg" width="16" height="19" viewBox="0 0 16 19" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9704 0.684937H3.10005C2.01431 0.684937 1.12598 1.53531 1.12598 2.57465V17.6923L8.03523 14.8578L14.9445 17.6923V2.57465C14.9445 1.53531 14.0561 0.684937 12.9704 0.684937Z"
+                        stroke="#0D4C92" stroke-width="1.06296" />
+                    </svg>
                   </div>
                   <div class="post-card-body-text">
                     <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
@@ -752,14 +766,14 @@
                 </div>
               </div>
               <div class="post-card-footer d-flex align-items-center justify-content-end">
-                <button type="button" class="post-card-footer-heart">
-                  <img src="assets/images/post/heart.svg" alt="heart">
-                </button>
-                <button type="button" class="post-card-footer-comment">
-                  <img src="assets/images/post/comment.svg" alt="comment">
-                </button>
+                <svg class="post-card-footer-heart active-blue-color" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.01911 0.632813C2.94463 0.632813 0.858887 3.47544 0.858887 6.60838C0.858887 11.9791 4.99582 14.1928 10.2819 17.6402C15.568 14.1928 19.7049 11.9791 19.7049 6.60838C19.7049 3.47544 17.6192 0.632813 14.5447 0.632813C12.5658 0.632813 10.9393 1.75172 10.2819 2.42305C9.62448 1.75172 7.99798 0.632813 6.01911 0.632813Z" stroke="#6425FE" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
               </div>
-              <div class="post-comment-box-wrap">
+              <div class="post-comment-box-wrap" id="post-comment-box-wrap">
                 <div class="post-comment-box">
                   <!-- ************ User Comment Container *********** -->
                   <div class="show-comment-container">
@@ -789,9 +803,9 @@
                             <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                           </button>
                         </div>
-                        <button type="button" class="post-like-btn"><img src="assets/images/post/like-blue.svg"
-                            alt="like-blue"></button>
-                        </button>
+                        <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
                       </div>
                       <!-- *********** All Reply Comments Wrapper ********** -->
                       <div class="comment-reply-wrapper">
@@ -820,8 +834,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                         <!-- ******* Reply Comment 2 ****** -->
@@ -849,8 +864,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                       </div>
@@ -882,16 +898,19 @@
                 </button>
               </div>
               <div class="post-card-body">
-                <a href="https://vimeo.com/160521065" class="d-block" data-lity>
-                  <img src="assets/images/post/post-1.png" alt="post img" class="redius-8 w-100">
+                <a href="javascript:void(0)" class="d-block">
+                  <img src="assets/images/post/post-1.png" alt="post img" class="redius-8 w-100" data-lity>
                 </a>
                 <div class="post-card-body-wrap">
                   <div class="post-card-body-date d-flex align-items-center justify-content-between">
                     <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00
                         PM</span></p>
-                    <a href="javascript:(voide)" class="">
-                      <img src="assets/images/post/bookmark.svg" alt="bookmark">
-                    </a>
+                    <svg class="bookmark-svg" width="16" height="19" viewBox="0 0 16 19" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9704 0.684937H3.10005C2.01431 0.684937 1.12598 1.53531 1.12598 2.57465V17.6923L8.03523 14.8578L14.9445 17.6923V2.57465C14.9445 1.53531 14.0561 0.684937 12.9704 0.684937Z"
+                        stroke="#0D4C92" stroke-width="1.06296" />
+                    </svg>
                   </div>
                   <div class="post-card-body-text">
                     <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
@@ -908,14 +927,14 @@
                 </div>
               </div>
               <div class="post-card-footer d-flex align-items-center justify-content-end">
-                <button type="button" class="post-card-footer-heart">
-                  <img src="assets/images/post/heart.svg" alt="heart">
-                </button>
-                <button type="button" class="post-card-footer-comment">
-                  <img src="assets/images/post/comment.svg" alt="comment">
-                </button>
+                <svg class="post-card-footer-heart active-blue-color" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.01911 0.632813C2.94463 0.632813 0.858887 3.47544 0.858887 6.60838C0.858887 11.9791 4.99582 14.1928 10.2819 17.6402C15.568 14.1928 19.7049 11.9791 19.7049 6.60838C19.7049 3.47544 17.6192 0.632813 14.5447 0.632813C12.5658 0.632813 10.9393 1.75172 10.2819 2.42305C9.62448 1.75172 7.99798 0.632813 6.01911 0.632813Z" stroke="#6425FE" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
               </div>
-              <div class="post-comment-box-wrap">
+              <div class="post-comment-box-wrap" id="post-comment-box-wrap">
                 <div class="post-comment-box">
                   <!-- ************ User Comment Container *********** -->
                   <div class="show-comment-container">
@@ -945,9 +964,9 @@
                             <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                           </button>
                         </div>
-                        <button type="button" class="post-like-btn"><img src="assets/images/post/like-blue.svg"
-                            alt="like-blue"></button>
-                        </button>
+                        <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
                       </div>
                       <!-- *********** All Reply Comments Wrapper ********** -->
                       <div class="comment-reply-wrapper">
@@ -976,8 +995,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                         <!-- ******* Reply Comment 2 ****** -->
@@ -1005,8 +1025,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                       </div>
@@ -1038,16 +1059,19 @@
                 </button>
               </div>
               <div class="post-card-body">
-                <a href="https://vimeo.com/160521065" class="d-block" data-lity>
-                  <img src="assets/images/post/post-2.png" alt="post img" class="redius-8 w-100">
+                <a href="javascript:void(0)" class="d-block">
+                  <img src="assets/images/post/post-2.png" alt="post img" class="redius-8 w-100" data-lity>
                 </a>
                 <div class="post-card-body-wrap">
                   <div class="post-card-body-date d-flex align-items-center justify-content-between">
                     <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00
                         PM</span></p>
-                    <a href="javascript:(voide)" class="">
-                      <img src="assets/images/post/bookmark.svg" alt="bookmark">
-                    </a>
+                    <svg class="bookmark-svg" width="16" height="19" viewBox="0 0 16 19" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9704 0.684937H3.10005C2.01431 0.684937 1.12598 1.53531 1.12598 2.57465V17.6923L8.03523 14.8578L14.9445 17.6923V2.57465C14.9445 1.53531 14.0561 0.684937 12.9704 0.684937Z"
+                        stroke="#0D4C92" stroke-width="1.06296" />
+                    </svg>
                   </div>
                   <div class="post-card-body-text">
                     <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
@@ -1064,14 +1088,14 @@
                 </div>
               </div>
               <div class="post-card-footer d-flex align-items-center justify-content-end">
-                <button type="button" class="post-card-footer-heart">
-                  <img src="assets/images/post/heart.svg" alt="heart">
-                </button>
-                <button type="button" class="post-card-footer-comment">
-                  <img src="assets/images/post/comment.svg" alt="comment">
-                </button>
+                <svg class="post-card-footer-heart active-blue-color" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.01911 0.632813C2.94463 0.632813 0.858887 3.47544 0.858887 6.60838C0.858887 11.9791 4.99582 14.1928 10.2819 17.6402C15.568 14.1928 19.7049 11.9791 19.7049 6.60838C19.7049 3.47544 17.6192 0.632813 14.5447 0.632813C12.5658 0.632813 10.9393 1.75172 10.2819 2.42305C9.62448 1.75172 7.99798 0.632813 6.01911 0.632813Z" stroke="#6425FE" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
               </div>
-              <div class="post-comment-box-wrap">
+              <div class="post-comment-box-wrap" id="post-comment-box-wrap">
                 <div class="post-comment-box">
                   <!-- ************ User Comment Container *********** -->
                   <div class="show-comment-container">
@@ -1101,9 +1125,9 @@
                             <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                           </button>
                         </div>
-                        <button type="button" class="post-like-btn"><img src="assets/images/post/like-blue.svg"
-                            alt="like-blue"></button>
-                        </button>
+                        <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
                       </div>
                       <!-- *********** All Reply Comments Wrapper ********** -->
                       <div class="comment-reply-wrapper">
@@ -1132,8 +1156,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                         <!-- ******* Reply Comment 2 ****** -->
@@ -1161,8 +1186,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                       </div>
@@ -1194,16 +1220,19 @@
                 </button>
               </div>
               <div class="post-card-body">
-                <a href="https://vimeo.com/160521065" class="d-block" data-lity>
-                  <img src="assets/images/post/post-3.png" alt="post img" class="redius-8 w-100">
+                <a href="javascript:void(0)" class="d-block">
+                  <img src="assets/images/post/post-3.png" alt="post img" class="redius-8 w-100" data-lity>
                 </a>
                 <div class="post-card-body-wrap">
                   <div class="post-card-body-date d-flex align-items-center justify-content-between">
                     <p class="primary-font-500 size-md text-color3"><span>Wed, 26 January 2021</span> <span>9:00
                         PM</span></p>
-                    <a href="javascript:(voide)" class="">
-                      <img src="assets/images/post/bookmark.svg" alt="bookmark">
-                    </a>
+                    <svg class="bookmark-svg" width="16" height="19" viewBox="0 0 16 19" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.9704 0.684937H3.10005C2.01431 0.684937 1.12598 1.53531 1.12598 2.57465V17.6923L8.03523 14.8578L14.9445 17.6923V2.57465C14.9445 1.53531 14.0561 0.684937 12.9704 0.684937Z"
+                        stroke="#0D4C92" stroke-width="1.06296" />
+                    </svg>
                   </div>
                   <div class="post-card-body-text">
                     <h5 class="post-card-body-title primary-font-700 size-lg l-h-lg-19 primary-color">$BBBY Update</h5>
@@ -1220,14 +1249,14 @@
                 </div>
               </div>
               <div class="post-card-footer d-flex align-items-center justify-content-end">
-                <button type="button" class="post-card-footer-heart">
-                  <img src="assets/images/post/heart.svg" alt="heart">
-                </button>
-                <button type="button" class="post-card-footer-comment">
-                  <img src="assets/images/post/comment.svg" alt="comment">
-                </button>
+                <svg class="post-card-footer-heart active-blue-color" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.01911 0.632813C2.94463 0.632813 0.858887 3.47544 0.858887 6.60838C0.858887 11.9791 4.99582 14.1928 10.2819 17.6402C15.568 14.1928 19.7049 11.9791 19.7049 6.60838C19.7049 3.47544 17.6192 0.632813 14.5447 0.632813C12.5658 0.632813 10.9393 1.75172 10.2819 2.42305C9.62448 1.75172 7.99798 0.632813 6.01911 0.632813Z" stroke="#6425FE" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <button type="button" class="post-card-footer-comment">
+                    <img src="assets/images/post/comment.svg" alt="comment">
+                  </button>
               </div>
-              <div class="post-comment-box-wrap">
+              <div class="post-comment-box-wrap" id="post-comment-box-wrap">
                 <div class="post-comment-box">
                   <!-- ************ User Comment Container *********** -->
                   <div class="show-comment-container">
@@ -1257,9 +1286,9 @@
                             <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                           </button>
                         </div>
-                        <button type="button" class="post-like-btn"><img src="assets/images/post/like-blue.svg"
-                            alt="like-blue"></button>
-                        </button>
+                        <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
                       </div>
                       <!-- *********** All Reply Comments Wrapper ********** -->
                       <div class="comment-reply-wrapper">
@@ -1288,8 +1317,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                         <!-- ******* Reply Comment 2 ****** -->
@@ -1317,8 +1347,9 @@
                                 <p class="primary-font-700 size-md text-color3 ms-1">Reply</p>
                               </button>
                             </div>
-                            <button type="button" class="post-like-btn"><img src="assets/images/post/like-gray.svg"
-                                alt="like-blue"></button>
+                            <svg class="post-like-btn active-blue-color" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.8503 14.9425H2.83368C2.47711 14.9425 2.13516 14.8008 1.88303 14.5487C1.6309 14.2966 1.48926 13.9546 1.48926 13.598V8.89259C1.48926 8.53603 1.6309 8.19407 1.88303 7.94194C2.13516 7.68981 2.47711 7.54817 2.83368 7.54817H4.8503M9.55576 6.20375V3.51492C9.55576 2.98007 9.3433 2.46714 8.96511 2.08895C8.58692 1.71076 8.07398 1.49829 7.53914 1.49829L4.8503 7.54817V14.9425H12.4328C12.757 14.9461 13.0717 14.8325 13.3187 14.6225C13.5658 14.4125 13.7286 14.1203 13.7772 13.7997L14.7049 7.74983C14.7341 7.55715 14.7211 7.36041 14.6668 7.17325C14.6125 6.98608 14.5181 6.81297 14.3902 6.66591C14.2623 6.51884 14.104 6.40134 13.9262 6.32153C13.7484 6.24173 13.5553 6.20155 13.3605 6.20375H9.55576Z" stroke="#6B6B6B" stroke-width="1.34442" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
                           </div>
                         </div>
                       </div>
@@ -1367,6 +1398,7 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>
   <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/jquery.nice-select.min.js"></script>
   <script src="assets/js/lity.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/script.js"></script>
